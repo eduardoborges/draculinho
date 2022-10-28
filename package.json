@@ -1,10 +1,11 @@
 {
   "name": "draculinho",
   "displayName": "Draculinho",
-  "description": "Optimized for use with Operator Mono and italic font style",
+  "description": "Just another Dracula theme fork, optimized for ligatures and italic fonts.",
   "author": {
     "name": "eduardoborges"
   },
+  "icon": "src/logo.png",
   "repository": {
     "url": "https://github.com/eduardoborges/draculinho.git"
   },
