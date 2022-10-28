@@ -1,0 +1,27 @@
+name: CD
+
+on:
+  release:
+    types:
+      - "published"
+
+jobs:
+  test:
+    name: Publish to Visual Studio Marketplace
+    runs-on: ubuntu-latest
+    env:
+      VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+      VERSION: ${{ github.event.release.tag_name }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+    
+      - run: npm run build;
+
+      - run: npx vsce publish -p $VSCE_TOKEN -i ./dist/draculinho-${VERSION}.vsix
