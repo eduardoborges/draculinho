@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/eduardoborges/draculinho/compare/1.0.0...1.1.0) (2022-10-28)
+
+
+### Bug Fixes
+
+* fix wrong icon path ([603a25e](https://github.com/eduardoborges/draculinho/commit/603a25e59a9c2a52cadb037a93309fc30fb57dba))
+
+
+### Features
+
+* add icon and colors examples ([83ad3cb](https://github.com/eduardoborges/draculinho/commit/83ad3cbe6d4ea3d60928911ca23d9c085d12c799))
+
 # 1.0.0 (2022-10-28)
 
 

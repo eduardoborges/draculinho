@@ -13,7 +13,7 @@
   "scripts": {
     "build": "rm -r dist; mkdir dist; npx vsce package -o ./dist/"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "eduardoborges",
   "engines": {
     "vscode": "^0.10.5"
