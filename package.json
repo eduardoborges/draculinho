@@ -1,0 +1,32 @@
+{
+  "name": "draculinho",
+  "displayName": "Draculinho",
+  "description": "Optimized for use with Operator Mono and italic font style",
+  "author": {
+    "name": "eduardoborges"
+  },
+  "repository": {
+    "url": "http://github.com/eduardoborges/draculinho"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -r dist; mkdir dist; npx vsce package -o ./dist/"
+  },
+  "version": "0.0.1",
+  "publisher": "eduardoborges",
+  "engines": {
+    "vscode": "^0.10.5"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Draculinho",
+        "uiTheme": "vs-dark",
+        "path": "./src/draculinho-theme.json"
+      }
+    ]
+  }
+}
