@@ -8,7 +8,7 @@
     "@semantic-release/changelog",
     ["@semantic-release/github", {
       "assets": [
-        {"path": "dist/*.vsix", "label": "Theme Distribution"}
+        {"path": "dist/*.vsix", "label": "draculinho-${version}.vsix"}
       ]
     }],
     ["@semantic-release/npm", {
