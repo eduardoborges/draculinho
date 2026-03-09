@@ -88,5 +88,9 @@ jobs:
       - name: Setup Mise (Node)
         uses: jdx/mise-action@v3
 
+      - name: Create Open VSX namespace (if not exists)
+        run: npx ovsx create-namespace eduardoborges -p ${{ secrets.OPENVSX_TOKEN }}
+        continue-on-error: true
+
       - name: Publish to Open VSX (Cursor)
         run: npx ovsx publish ./draculinho-${VERSION}.vsix -p ${{ secrets.OPENVSX_TOKEN }}
