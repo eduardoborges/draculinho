@@ -87,3 +87,4 @@ Draculinho keeps the Dracula DNA but pushes the background **much darker** (`#0E
 ## License
 
 [MIT](./LICENSE.md) — based on the original [Dracula Theme](https://github.com/dracula/dracula-theme) by Zeno Rocha.
+.
