@@ -3,6 +3,14 @@
 
 ### Bug Fixes
 
+* force bump ([c6a6153](https://github.com/eduardoborges/draculinho/commit/c6a61537485386c798a1c0d8f03176564a4616ca))
+* update package dependencies and build scripts; enhance CI/CD workflows for VS Code and Open VSX publishing ([ffc0715](https://github.com/eduardoborges/draculinho/commit/ffc07152f66e8dc544e6c5f0dc291e8d2f33ebfe))
+
+## [1.1.1](https://github.com/eduardoborges/draculinho/compare/1.1.0...1.1.1) (2026-03-09)
+
+
+### Bug Fixes
+
 * update package dependencies and build scripts; enhance CI/CD workflows for VS Code and Open VSX publishing ([ffc0715](https://github.com/eduardoborges/draculinho/commit/ffc07152f66e8dc544e6c5f0dc291e8d2f33ebfe))
 
 # [1.1.0](https://github.com/eduardoborges/draculinho/compare/1.0.0...1.1.0) (2022-10-28)
