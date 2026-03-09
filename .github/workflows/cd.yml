@@ -19,16 +19,32 @@ jobs:
     env:
       VERSION: ${{ inputs.version || github.event.release.tag_name }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Mise (Node + pnpm)
+        uses: jdx/mise-action@v3
         with:
-          node-version: 20
+          cache: true
+
+      - name: Get pnpm store path
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_ENV
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Build VSIX
-        run: npm run build
+        run: pnpm run build
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload VSIX artifact
+        uses: actions/upload-artifact@v4
         with:
           name: vsix
           path: ./dist/draculinho-${{ env.VERSION }}.vsix
@@ -43,15 +59,16 @@ jobs:
     env:
       VERSION: ${{ inputs.version || github.event.release.tag_name }}
     steps:
-      - uses: actions/download-artifact@v4
+      - name: Download VSIX artifact
+        uses: actions/download-artifact@v4
         with:
           name: vsix
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      - name: Setup Mise (Node)
+        uses: jdx/mise-action@v3
 
-      - run: npx @vscode/vsce publish -p ${{ secrets.VSCE_TOKEN }} -i ./draculinho-${VERSION}.vsix
+      - name: Publish to VS Code Marketplace
+        run: npx @vscode/vsce publish -p ${{ secrets.VSCE_TOKEN }} -i ./draculinho-${VERSION}.vsix
 
   publish-openvsx:
     name: Publish to Open VSX (Cursor)
@@ -63,12 +80,13 @@ jobs:
     env:
       VERSION: ${{ inputs.version || github.event.release.tag_name }}
     steps:
-      - uses: actions/download-artifact@v4
+      - name: Download VSIX artifact
+        uses: actions/download-artifact@v4
         with:
           name: vsix
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      - name: Setup Mise (Node)
+        uses: jdx/mise-action@v3
 
-      - run: npx ovsx publish ./draculinho-${VERSION}.vsix -p ${{ secrets.OPENVSX_TOKEN }}
+      - name: Publish to Open VSX (Cursor)
+        run: npx ovsx publish ./draculinho-${VERSION}.vsix -p ${{ secrets.OPENVSX_TOKEN }}

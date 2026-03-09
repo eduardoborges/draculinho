@@ -11,16 +11,32 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
 
-      - uses: actions/setup-node@v4
+      - name: Setup Mise (Node + pnpm)
+        uses: jdx/mise-action@v3
         with:
-          node-version: 20
-          cache: npm
+          cache: true
 
-      - run: npm ci
-      - run: npm run build
-      - run: npx semantic-release --ci
+      - name: Get pnpm store path
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_ENV
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build VSIX
+        run: pnpm run build
+
+      - name: Release (semantic-release)
+        run: pnpm exec semantic-release --ci
