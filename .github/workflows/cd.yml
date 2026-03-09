@@ -75,7 +75,7 @@ jobs:
     needs: build
     environment:
       name: openvsx
-      url: https://open-vsx.org/api/eduardoborges/draculinho
+      url: https://open-vsx.org/extension/eduardoborges/draculinho
     runs-on: ubuntu-latest
     env:
       VERSION: ${{ inputs.version || github.event.release.tag_name }}
