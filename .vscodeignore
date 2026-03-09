@@ -1,0 +1,9 @@
+.github/
+node_modules/
+dist/
+[Content_Types].xml
+.gitignore
+.gitattributes
+.releaserc
+package-lock.json
+CHANGELOG.md
