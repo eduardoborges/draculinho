@@ -14,5 +14,5 @@ jobs:
     name: Check Semantic Version PR
     runs-on: "ubuntu-latest"
     steps:
-      - uses: actions/checkout@v3
-      - uses: amannn/action-semantic-pull-request@v4
+      - uses: actions/checkout@v4
+      - uses: amannn/action-semantic-pull-request@v5

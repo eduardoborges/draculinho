@@ -5,23 +5,70 @@ on:
     types:
       - "published"
 
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish (e.g. 1.2.0)"
+        required: true
+        type: string
+
 jobs:
-  test:
-    name: Publish to Visual Studio Marketplace
+  build:
+    name: Build VSIX
     runs-on: ubuntu-latest
     env:
-      VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
-      VERSION: ${{ github.event.release.tag_name }}
+      VERSION: ${{ inputs.version || github.event.release.tag_name }}
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          persist-credentials: false
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
-    
-      - run: npm run build;
+          node-version: 20
 
-      - run: npx vsce publish -p $VSCE_TOKEN -i ./dist/draculinho-${VERSION}.vsix
+      - name: Build VSIX
+        run: npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vsix
+          path: ./dist/draculinho-${{ env.VERSION }}.vsix
+
+  publish-vscode:
+    name: Publish to VS Code Marketplace
+    needs: build
+    environment:
+      name: vscode
+      url: https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version || github.event.release.tag_name }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: vsix
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npx @vscode/vsce publish -p ${{ secrets.VSCE_TOKEN }} -i ./draculinho-${VERSION}.vsix
+
+  publish-openvsx:
+    name: Publish to Open VSX (Cursor)
+    needs: build
+    environment:
+      name: openvsx
+      url: https://open-vsx.org/api/eduardoborges/draculinho
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version || github.event.release.tag_name }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: vsix
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npx ovsx publish ./draculinho-${VERSION}.vsix -p ${{ secrets.OPENVSX_TOKEN }}
