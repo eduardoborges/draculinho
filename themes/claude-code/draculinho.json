@@ -2,8 +2,8 @@
   "name": "Draculinho",
   "base": "dark",
   "overrides": {
-    "claude": "rgb(189,147,249)",
-    "claudeShimmer": "rgb(214,172,255)",
+    "claude": "rgb(255,184,108)",
+    "claudeShimmer": "rgb(255,212,167)",
     "skill": "rgb(189,147,249)",
     "effortUltra": "rgb(189,147,249)",
     "remember": "rgb(189,147,249)",
