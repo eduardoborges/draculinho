@@ -101,9 +101,11 @@ jobs:
     #   1. Register as a developer at https://chrome.google.com/webstore/devconsole and upload
     #      themes/chrome zipped once. That creates the item, its ID, and the store listing.
     #   2. Run `npx chrome-webstore-upload-keys` to get a client id, client secret and refresh token.
-    #   3. Create the "chrome" environment with the variable CHROME_EXTENSION_ID and the secrets
-    #      CHROME_CLIENT_ID, CHROME_CLIENT_SECRET and CHROME_REFRESH_TOKEN.
+    #   3. Set the repository variable CHROME_EXTENSION_ID and create the "chrome" environment with
+    #      the secrets CHROME_CLIENT_ID, CHROME_CLIENT_SECRET and CHROME_REFRESH_TOKEN.
+    # The job is skipped until the variable exists.
     # The store rejects a version it already has, so re-running the same tag fails here on purpose.
+    if: vars.CHROME_EXTENSION_ID != ''
     environment:
       name: chrome
       url: https://chromewebstore.google.com/detail/${{ vars.CHROME_EXTENSION_ID }}
