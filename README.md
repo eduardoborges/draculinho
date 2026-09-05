@@ -45,6 +45,14 @@ A darker, moodier take on the classic [Dracula](https://draculatheme.com) theme.
 
 ## Install
 
+The install script copies the theme for the apps you choose and points each config at it:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/install.sh | sh
+```
+
+Pass app names to skip the menu, for example `sh install.sh zed ghostty`. Options: `vscode`, `zed`, `ghostty`, `herdr`, `claude-code`, `all`. The manual steps for each app follow.
+
 ### VS Code, Cursor and VSCodium
 
 | Editor   | Link |
