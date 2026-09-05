@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/eduardoborges/draculinho/compare/1.2.0...1.3.0) (2026-09-05)
+
+
+### Bug Fixes
+
+* **claude-code:** orange spinner while working ([328531a](https://github.com/eduardoborges/draculinho/commit/328531a44849e9fdda60b765b17f76629e591bf4))
+
+
+### Features
+
+* add Chrome theme ([f263a4e](https://github.com/eduardoborges/draculinho/commit/f263a4ea5dfb75d3edbed51fb5914e847b3290ef))
+
 # [1.2.0](https://github.com/eduardoborges/draculinho/compare/1.1.1...1.2.0) (2026-09-05)
 
 
