@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/eduardoborges/draculinho/compare/1.1.1...1.2.0) (2026-09-05)
+
+
+### Features
+
+* add install script with app selection ([3790b67](https://github.com/eduardoborges/draculinho/commit/3790b672a7c2f500fb82fcfb10bb787baecc28fd))
+* add Zed, Ghostty, Herdr and Claude Code themes ([95f1b09](https://github.com/eduardoborges/draculinho/commit/95f1b095abb4190179f296e7dc0374a09b969261))
+
 ## [1.1.1](https://github.com/eduardoborges/draculinho/compare/1.1.0...1.1.1) (2026-03-09)
 
 
