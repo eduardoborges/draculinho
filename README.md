@@ -51,7 +51,7 @@ The install script copies the theme for the apps you choose and points each conf
 curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/install.sh | sh
 ```
 
-Pass app names to skip the menu, for example `sh install.sh zed ghostty`. Options: `vscode`, `zed`, `ghostty`, `herdr`, `claude-code`, `all`. The manual steps for each app follow.
+Pass app names to skip the menu, for example `sh install.sh zed ghostty`. Options: `vscode`, `zed`, `ghostty`, `herdr`, `claude-code`, `chrome`, `all`. The manual steps for each app follow.
 
 ### VS Code, Cursor and VSCodium
 
@@ -96,6 +96,10 @@ Copy [`themes/claude-code/draculinho.json`](./themes/claude-code/draculinho.json
 ```json
 { "theme": "custom:draculinho" }
 ```
+
+### Chrome
+
+Chrome only takes themes from the Web Store or as an unpacked extension. Open `chrome://extensions`, turn on Developer mode, click Load unpacked and pick the [`themes/chrome`](./themes/chrome) folder. The install script copies it to `~/.config/draculinho/chrome` for you.
 
 ## Recommended Setup
 

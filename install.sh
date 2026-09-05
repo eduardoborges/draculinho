@@ -9,7 +9,7 @@ set -eu
 RAW="https://raw.githubusercontent.com/eduardoborges/draculinho/main/themes"
 HERE="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 CFG="${XDG_CONFIG_HOME:-$HOME/.config}"
-APPS="vscode zed ghostty herdr claude-code"
+APPS="vscode zed ghostty herdr claude-code chrome"
 
 # theme <app> <file>: prints the local path of a theme file, downloading it when there is no checkout.
 theme() {
@@ -92,6 +92,13 @@ PY
   else
     say "copied to $dir/themes/. Pick Draculinho with /theme."
   fi
+}
+
+install_chrome() {
+  dest="$CFG/draculinho/chrome"
+  mkdir -p "$dest"
+  cp "$(theme chrome manifest.json)" "$dest/manifest.json"
+  say "saved to $dest. Open chrome://extensions, turn on Developer mode, click Load unpacked and pick that folder."
 }
 
 pick() {
