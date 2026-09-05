@@ -1,0 +1,24 @@
+# Draculinho for Herdr. Paste into ~/.config/herdr/config.toml, keeping dracula as the base.
+[theme]
+name = "dracula"
+
+[theme.custom]
+accent = "#BD93F9"
+panel_bg = "#0E131B"
+sidebar_bg = "#0E131B"
+active_row_bg = "#282A36"
+selection_bg = "#44475A"
+surface0 = "#21222C"
+surface1 = "#282A36"
+surface_dim = "#191A21"
+overlay0 = "#44475A"
+overlay1 = "#465276"
+text = "#CDD0DD"
+subtext0 = "#bac2db"
+mauve = "#BD93F9"
+blue = "#BD93F9"
+teal = "#00B5DC"
+green = "#3dcf62"
+yellow = "#E2DD61"
+peach = "#FFB86C"
+red = "#FF5555"

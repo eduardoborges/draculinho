@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./src/assets/logo.png" width="100" />
+<img src="./assets/logo.png" width="100" />
 
 # Draculinho
 
@@ -18,15 +18,15 @@ A darker, moodier take on the classic [Dracula](https://draculatheme.com) theme.
 
 **JavaScript**
 
-![JavaScript example](./src/assets/js-example.png)
+![JavaScript example](./assets/js-example.png)
 
 **React / TSX**
 
-![TSX example](./src/assets/tsx-example.png)
+![TSX example](./assets/tsx-example.png)
 
 **CSS**
 
-![CSS example](./src/assets/css-example.png)
+![CSS example](./assets/css-example.png)
 
 ## Color Palette
 
@@ -45,6 +45,8 @@ A darker, moodier take on the classic [Dracula](https://draculatheme.com) theme.
 
 ## Install
 
+### VS Code, Cursor and VSCodium
+
 | Editor   | Link |
 |----------|------|
 | VS Code  | [`ext install eduardoborges.draculinho`](https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho) |
@@ -52,6 +54,40 @@ A darker, moodier take on the classic [Dracula](https://draculatheme.com) theme.
 | VSCodium | [`ext install eduardoborges.draculinho`](https://open-vsx.org/extension/eduardoborges/draculinho) |
 
 Or search for **Draculinho** in your editor's extension panel.
+
+### Zed
+
+Copy [`themes/zed/draculinho.json`](./themes/zed/draculinho.json) to `~/.config/zed/themes/` and set the theme in your settings:
+
+```json
+{ "theme": { "mode": "dark", "dark": "Draculinho" } }
+```
+
+### Ghostty
+
+Copy [`themes/ghostty/draculinho`](./themes/ghostty/draculinho) to `~/.config/ghostty/themes/` and add this line to your config:
+
+```
+theme = draculinho
+```
+
+Reload the config afterwards (cmd+shift+, on macOS).
+
+### Herdr
+
+Herdr has no theme files. Draculinho is a set of `[theme.custom]` overrides on top of the built-in `dracula` theme. Copy the contents of [`themes/herdr/draculinho.toml`](./themes/herdr/draculinho.toml) into `~/.config/herdr/config.toml`, then run:
+
+```sh
+herdr server reload-config
+```
+
+### Claude Code
+
+Copy [`themes/claude-code/draculinho.json`](./themes/claude-code/draculinho.json) to `~/.claude/themes/` and pick Draculinho in `/theme`. You can also set it directly in `~/.claude/settings.json`:
+
+```json
+{ "theme": "custom:draculinho" }
+```
 
 ## Recommended Setup
 
@@ -87,4 +123,3 @@ Draculinho keeps the Dracula DNA but pushes the background **much darker** (`#0E
 ## License
 
 [MIT](./LICENSE.md) — based on the original [Dracula Theme](https://github.com/dracula/dracula-theme) by Zeno Rocha.
-.
