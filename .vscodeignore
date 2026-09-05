@@ -12,3 +12,6 @@ themes/ghostty/
 themes/herdr/
 themes/claude-code/
 pnpm-workspace.yaml
+assets/preview-*.png
+assets/palette.png
+scripts/

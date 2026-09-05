@@ -1,137 +1,94 @@
 <div align="center">
 
-<img src="./assets/logo.png" width="100" />
+<img src="./assets/logo.png" width="96" alt="Draculinho" />
 
 # Draculinho
 
-A darker, moodier take on the classic [Dracula](https://draculatheme.com) theme. Crafted for ligature fonts and italic lovers.
+Dracula, a few shades darker. Made for ligature fonts and italics.
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/eduardoborges.draculinho?style=flat-square&label=VS%20Code&colorA=0E131B&colorB=BD93F9)](https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho)
+[![VS Code](https://img.shields.io/visual-studio-marketplace/v/eduardoborges.draculinho?style=flat-square&label=VS%20Code&colorA=0E131B&colorB=BD93F9)](https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho)
 [![Open VSX](https://img.shields.io/open-vsx/v/eduardoborges/draculinho?style=flat-square&label=Open%20VSX&colorA=0E131B&colorB=FF79C6)](https://open-vsx.org/extension/eduardoborges/draculinho)
 [![License](https://img.shields.io/github/license/eduardoborges/draculinho?style=flat-square&colorA=0E131B&colorB=3dcf62)](./LICENSE.md)
 
+<br />
+
+<img src="./assets/preview-tsx.png" width="860" alt="TypeScript and JSX in Draculinho" />
+
 </div>
 
----
+## One palette, six apps
 
-## Preview
+| App | Install |
+|---|---|
+| VS Code, Cursor, VSCodium | Search for **Draculinho** in the extensions panel, or [`ext install eduardoborges.draculinho`](https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho) |
+| Zed | `sh install.sh zed` |
+| Ghostty | `sh install.sh ghostty` |
+| Herdr | `sh install.sh herdr` |
+| Claude Code | `sh install.sh claude-code` |
+| Chrome | `sh install.sh chrome`, then load it unpacked |
 
-**JavaScript**
-
-![JavaScript example](./assets/js-example.png)
-
-**React / TSX**
-
-![TSX example](./assets/tsx-example.png)
-
-**CSS**
-
-![CSS example](./assets/css-example.png)
-
-## Color Palette
-
-| Color          | Hex       | Preview |
-|----------------|-----------|---------|
-| Background     | `#0E131B` | ![#0E131B](https://img.shields.io/badge/%20%20-0E131B?style=flat-square&color=0E131B) |
-| Foreground     | `#CDD0DD` | ![#CDD0DD](https://img.shields.io/badge/%20%20-CDD0DD?style=flat-square&color=CDD0DD) |
-| Purple         | `#BD93F9` | ![#BD93F9](https://img.shields.io/badge/%20%20-BD93F9?style=flat-square&color=BD93F9) |
-| Pink           | `#FF79C6` | ![#FF79C6](https://img.shields.io/badge/%20%20-FF79C6?style=flat-square&color=FF79C6) |
-| Cyan           | `#00B5DC` | ![#00B5DC](https://img.shields.io/badge/%20%20-00B5DC?style=flat-square&color=00B5DC) |
-| Green          | `#3dcf62` | ![#3dcf62](https://img.shields.io/badge/%20%20-3dcf62?style=flat-square&color=3dcf62) |
-| Orange         | `#FFB86C` | ![#FFB86C](https://img.shields.io/badge/%20%20-FFB86C?style=flat-square&color=FFB86C) |
-| Red            | `#FF5555` | ![#FF5555](https://img.shields.io/badge/%20%20-FF5555?style=flat-square&color=FF5555) |
-| Yellow         | `#E2DD61` | ![#E2DD61](https://img.shields.io/badge/%20%20-E2DD61?style=flat-square&color=E2DD61) |
-| Comment        | `#465276` | ![#465276](https://img.shields.io/badge/%20%20-465276?style=flat-square&color=465276) |
-
-## Install
-
-The install script copies the theme for the apps you choose and points each config at it:
+The script copies each theme into place and points the app's config at it. Run it with no arguments for a menu, name the apps you want, or pass `all`:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/install.sh | sh
 ```
 
-Pass app names to skip the menu, for example `sh install.sh zed ghostty`. Options: `vscode`, `zed`, `ghostty`, `herdr`, `claude-code`, `chrome`, `all`. The manual steps for each app follow.
+<details>
+<summary>Manual steps, per app</summary>
 
-### VS Code, Cursor and VSCodium
+**Zed.** Copy [`themes/zed/draculinho.json`](./themes/zed/draculinho.json) to `~/.config/zed/themes/` and set `"theme": { "mode": "dark", "dark": "Draculinho" }` in your settings.
 
-| Editor   | Link |
-|----------|------|
-| VS Code  | [`ext install eduardoborges.draculinho`](https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho) |
-| Cursor   | [`ext install eduardoborges.draculinho`](https://open-vsx.org/extension/eduardoborges/draculinho) |
-| VSCodium | [`ext install eduardoborges.draculinho`](https://open-vsx.org/extension/eduardoborges/draculinho) |
+**Ghostty.** Copy [`themes/ghostty/draculinho`](./themes/ghostty/draculinho) to `~/.config/ghostty/themes/`, add `theme = draculinho` to your config and reload (cmd+shift+, on macOS).
 
-Or search for **Draculinho** in your editor's extension panel.
+**Herdr.** Herdr has no theme files, only overrides on top of a built-in theme. Paste the contents of [`themes/herdr/draculinho.toml`](./themes/herdr/draculinho.toml) into `~/.config/herdr/config.toml` and run `herdr server reload-config`.
 
-### Zed
+**Claude Code.** Copy [`themes/claude-code/draculinho.json`](./themes/claude-code/draculinho.json) to `~/.claude/themes/` and pick Draculinho in `/theme`, or set `"theme": "custom:draculinho"` in `~/.claude/settings.json`.
 
-Copy [`themes/zed/draculinho.json`](./themes/zed/draculinho.json) to `~/.config/zed/themes/` and set the theme in your settings:
+**Chrome.** Chrome only takes themes from the Web Store or as an unpacked extension. Open `chrome://extensions`, turn on Developer mode, click Load unpacked and pick the [`themes/chrome`](./themes/chrome) folder.
 
-```json
-{ "theme": { "mode": "dark", "dark": "Draculinho" } }
-```
+</details>
 
-### Ghostty
+## Palette
 
-Copy [`themes/ghostty/draculinho`](./themes/ghostty/draculinho) to `~/.config/ghostty/themes/` and add this line to your config:
+<img src="./assets/palette.png" alt="Draculinho palette" />
 
-```
-theme = draculinho
-```
+Draculinho keeps Dracula's hues and drops the background from `#282A36` to `#0E131B`. Green, cyan and yellow are pulled back a notch so they don't glow against the darker ground, and comments sit at `#465276`, dim enough to read past. Keywords, storage types and `this` are italic, which is where a font with a real italic earns its place.
 
-Reload the config afterwards (cmd+shift+, on macOS).
+## Terminal
 
-### Herdr
+<div align="center">
+<img src="./assets/preview-terminal.png" width="760" alt="Ghostty running Draculinho" />
+</div>
 
-Herdr has no theme files. Draculinho is a set of `[theme.custom]` overrides on top of the built-in `dracula` theme. Copy the contents of [`themes/herdr/draculinho.toml`](./themes/herdr/draculinho.toml) into `~/.config/herdr/config.toml`, then run:
+Ghostty and Zed's terminal share the same sixteen ANSI colors. Herdr gets `[theme.custom]` overrides on its built-in Dracula. Claude Code gets the palette across the prompt, diffs and status colors, with the working spinner in orange.
 
-```sh
-herdr server reload-config
-```
+## CSS
 
-### Claude Code
+<div align="center">
+<img src="./assets/preview-css.png" width="700" alt="CSS in Draculinho" />
+</div>
 
-Copy [`themes/claude-code/draculinho.json`](./themes/claude-code/draculinho.json) to `~/.claude/themes/` and pick Draculinho in `/theme`. You can also set it directly in `~/.claude/settings.json`:
+## Fonts
 
-```json
-{ "theme": "custom:draculinho" }
-```
-
-### Chrome
-
-Chrome only takes themes from the Web Store or as an unpacked extension. Open `chrome://extensions`, turn on Developer mode, click Load unpacked and pick the [`themes/chrome`](./themes/chrome) folder. The install script copies it to `~/.config/draculinho/chrome` for you.
-
-## Recommended Setup
-
-This theme was designed with ligature and italic fonts in mind. For the best experience, try one of these fonts:
-
-- [Dank Mono](https://philpl.gumroad.com/l/dank-mono) — ligatures and beautiful italics, made for code
-- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-- [Fira Code](https://github.com/tonsky/FiraCode)
-- [Cascadia Code](https://github.com/microsoft/cascadia-code)
-
-Then enable ligatures and italic rendering in your `settings.json`:
+The previews use [Dank Mono](https://philpl.gumroad.com/l/dank-mono). [JetBrains Mono](https://www.jetbrains.com/lp/mono/), [Fira Code](https://github.com/tonsky/FiraCode) and [Cascadia Code](https://github.com/microsoft/cascadia-code) also have proper italics. In VS Code, turn ligatures on and, if you like, italic comments too:
 
 ```json
 {
   "editor.fontLigatures": true,
   "editor.tokenColorCustomizations": {
     "[Draculinho]": {
-      "textMateRules": [
-        {
-          "scope": "comment",
-          "settings": { "fontStyle": "italic" }
-        }
-      ]
+      "textMateRules": [{ "scope": "comment", "settings": { "fontStyle": "italic" } }]
     }
   }
 }
 ```
 
-## What Makes It Different
+## Development
 
-Draculinho keeps the Dracula DNA but pushes the background **much darker** (`#0E131B` vs the original `#282A36`), giving a deeper, more focused feel — especially on OLED displays. Keywords, storage types, and special variables render in *italic*, making the code structure stand out at a glance.
+Each port lives in `themes/<app>/`. The VS Code theme is the reference and the others follow its colors. `python3 scripts/previews.py` regenerates the images in `assets/` with headless Chrome.
+
+Releases come from conventional commits on `main`. `feat:` bumps the minor version, `fix:` the patch. CI then publishes to the VS Code Marketplace and Open VSX. The Chrome Web Store job runs once its credentials are set.
 
 ## License
 
-[MIT](./LICENSE.md) — based on the original [Dracula Theme](https://github.com/dracula/dracula-theme) by Zeno Rocha.
+[MIT](./LICENSE.md). Based on the [Dracula Theme](https://github.com/dracula/dracula-theme) by Zeno Rocha.
