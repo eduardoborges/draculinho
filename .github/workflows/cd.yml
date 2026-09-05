@@ -94,3 +94,37 @@ jobs:
 
       - name: Publish to Open VSX (Cursor)
         run: npx ovsx publish ./draculinho-${VERSION}.vsix -p ${{ secrets.OPENVSX_TOKEN }}
+
+  publish-chrome:
+    name: Publish to Chrome Web Store
+    # One-time setup, by hand:
+    #   1. Register as a developer at https://chrome.google.com/webstore/devconsole and upload
+    #      themes/chrome zipped once. That creates the item, its ID, and the store listing.
+    #   2. Run `npx chrome-webstore-upload-keys` to get a client id, client secret and refresh token.
+    #   3. Create the "chrome" environment with the variable CHROME_EXTENSION_ID and the secrets
+    #      CHROME_CLIENT_ID, CHROME_CLIENT_SECRET and CHROME_REFRESH_TOKEN.
+    # The store rejects a version it already has, so re-running the same tag fails here on purpose.
+    environment:
+      name: chrome
+      url: https://chromewebstore.google.com/detail/${{ vars.CHROME_EXTENSION_ID }}
+    runs-on: ubuntu-latest
+    env:
+      VERSION: ${{ inputs.version || github.event.release.tag_name }}
+      EXTENSION_ID: ${{ vars.CHROME_EXTENSION_ID }}
+      CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
+      REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Mise (Node)
+        uses: jdx/mise-action@v3
+
+      - name: Stamp the release version on the manifest
+        run: |
+          mkdir chrome-build
+          jq --arg v "$VERSION" '.version = $v' themes/chrome/manifest.json > chrome-build/manifest.json
+
+      - name: Upload and publish
+        run: npx chrome-webstore-upload-cli@4 --source chrome-build
