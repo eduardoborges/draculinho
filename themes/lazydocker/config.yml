@@ -1,0 +1,7 @@
+# Draculinho for lazydocker. Merge under gui: in ~/Library/Application Support/lazydocker/config.yml
+gui:
+  theme:
+    activeBorderColor: ["#BD93F9", bold]
+    inactiveBorderColor: ["#465276"]
+    selectedLineBgColor: ["#282A36"]
+    optionsTextColor: ["#00B5DC"]

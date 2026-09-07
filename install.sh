@@ -9,7 +9,7 @@ set -eu
 RAW="https://raw.githubusercontent.com/eduardoborges/draculinho/main/themes"
 HERE="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 CFG="${XDG_CONFIG_HOME:-$HOME/.config}"
-APPS="vscode zed ghostty herdr claude-code chrome"
+APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack"
 
 # theme <app> <file>: prints the local path of a theme file, downloading it when there is no checkout.
 theme() {
@@ -99,6 +99,75 @@ install_chrome() {
   mkdir -p "$dest"
   cp "$(theme chrome manifest.json)" "$dest/manifest.json"
   say "saved to $dest. Open chrome://extensions, turn on Developer mode, click Load unpacked and pick that folder."
+}
+
+install_opencode() {
+  mkdir -p "$CFG/opencode/themes"
+  cp "$(theme opencode draculinho.json)" "$CFG/opencode/themes/draculinho.json"
+  conf="$CFG/opencode/opencode.json"
+  if command -v python3 >/dev/null 2>&1; then
+    python3 - "$conf" <<'PY'
+import json, sys, os
+p = sys.argv[1]
+d = json.load(open(p)) if os.path.exists(p) else {"$schema": "https://opencode.ai/config.json"}
+d["theme"] = "draculinho"
+json.dump(d, open(p, "w"), indent=2); open(p, "a").write("\n")
+PY
+    say "theme set to draculinho in $conf."
+  else
+    say "copied to $CFG/opencode/themes/. Set \"theme\": \"draculinho\" in opencode.json."
+  fi
+}
+
+# yaml_theme <app> <dir>: writes the config when it is empty, otherwise leaves it alone and says so.
+yaml_theme() {
+  conf="$2/config.yml"
+  mkdir -p "$2"
+  if [ -s "$conf" ] && ! grep -q 'Draculinho' "$conf"; then
+    say "$conf already has content. Merge $RAW/$1/config.yml under gui: by hand."
+    return
+  fi
+  cp "$(theme "$1" config.yml)" "$conf"
+  say "written to $conf"
+}
+
+install_lazygit() {
+  case "$(uname)" in Darwin) dir="$HOME/Library/Application Support/lazygit" ;; *) dir="$CFG/lazygit" ;; esac
+  [ -d "$CFG/lazygit" ] && dir="$CFG/lazygit"
+  yaml_theme lazygit "$dir"
+}
+
+install_lazydocker() {
+  case "$(uname)" in Darwin) dir="$HOME/Library/Application Support/lazydocker" ;; *) dir="$CFG/lazydocker" ;; esac
+  [ -d "$CFG/lazydocker" ] && dir="$CFG/lazydocker"
+  yaml_theme lazydocker "$dir"
+}
+
+install_xcode() {
+  dir="$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes"
+  mkdir -p "$dir"
+  cp "$(theme xcode Draculinho.xccolortheme)" "$dir/Draculinho.xccolortheme"
+  defaults write com.apple.dt.Xcode XCFontAndColorCurrentDarkTheme Draculinho.xccolortheme 2>/dev/null
+  say "installed. Restart Xcode, or pick it in Settings > Themes. Fonts point to Dank Mono."
+}
+
+install_android_studio() {
+  found=
+  for d in "$HOME/Library/Application Support/Google"/AndroidStudio* "$CFG"/Google/AndroidStudio*; do
+    [ -d "$d" ] || continue
+    mkdir -p "$d/colors"
+    cp "$(theme jetbrains Draculinho.icls)" "$d/colors/Draculinho.icls"
+    say "copied to $d/colors/"
+    found=1
+  done
+  [ "$found" ] || say "no Android Studio config dir found. Import themes/jetbrains/Draculinho.icls in Settings > Editor > Color Scheme."
+  [ "$found" ] && say "pick Draculinho in Settings > Editor > Color Scheme."
+}
+
+install_slack() {
+  str="$(cat "$(theme slack draculinho.txt)")"
+  if command -v pbcopy >/dev/null 2>&1; then printf '%s' "$str" | pbcopy; say "theme string copied to the clipboard."; fi
+  say "Slack > Preferences > Themes > Custom theme, paste: $str"
 }
 
 pick() {

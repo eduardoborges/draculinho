@@ -16,7 +16,7 @@ Dracula, a few shades darker. Made for ligature fonts and italics.
 
 </div>
 
-## One palette, six apps
+## One palette, every app
 
 | App | Install |
 |---|---|
@@ -26,6 +26,11 @@ Dracula, a few shades darker. Made for ligature fonts and italics.
 | Herdr | `sh install.sh herdr` |
 | Claude Code | `sh install.sh claude-code` |
 | Chrome | `sh install.sh chrome`, then load it unpacked |
+| OpenCode | `sh install.sh opencode` |
+| lazygit, lazydocker | `sh install.sh lazygit lazydocker` |
+| Xcode | `sh install.sh xcode` |
+| Android Studio, JetBrains IDEs | `sh install.sh android-studio` |
+| Slack | `sh install.sh slack`, then paste |
 
 The script copies each theme into place and points the app's config at it. Run it with no arguments for a menu, name the apps you want, or pass `all`:
 
@@ -45,6 +50,16 @@ curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/insta
 **Claude Code.** Copy [`themes/claude-code/draculinho.json`](./themes/claude-code/draculinho.json) to `~/.claude/themes/` and pick Draculinho in `/theme`, or set `"theme": "custom:draculinho"` in `~/.claude/settings.json`.
 
 **Chrome.** Chrome only takes themes from the Web Store or as an unpacked extension. Open `chrome://extensions`, turn on Developer mode, click Load unpacked and pick the [`themes/chrome`](./themes/chrome) folder.
+
+**OpenCode.** Copy [`themes/opencode/draculinho.json`](./themes/opencode/draculinho.json) to `~/.config/opencode/themes/` and set `"theme": "draculinho"` in `opencode.json`.
+
+**lazygit and lazydocker.** Merge [`themes/lazygit/config.yml`](./themes/lazygit/config.yml) or [`themes/lazydocker/config.yml`](./themes/lazydocker/config.yml) into the app's `config.yml` (on macOS under `~/Library/Application Support/<app>/`).
+
+**Xcode.** Copy [`themes/xcode/Draculinho.xccolortheme`](./themes/xcode/Draculinho.xccolortheme) to `~/Library/Developer/Xcode/UserData/FontAndColorThemes/` and pick it in Settings > Themes. The fonts point to Dank Mono, so change them there if you use another one.
+
+**Android Studio and other JetBrains IDEs.** Import [`themes/jetbrains/Draculinho.icls`](./themes/jetbrains/Draculinho.icls) in Settings > Editor > Color Scheme. It is a color scheme only, not a UI theme.
+
+**Slack.** Preferences > Themes > Custom theme, paste the line in [`themes/slack/draculinho.txt`](./themes/slack/draculinho.txt).
 
 </details>
 
