@@ -6,14 +6,14 @@
   "theme": {
     "colors": {
       "frame": [
-        14,
-        19,
-        27
+        40,
+        42,
+        54
       ],
       "frame_inactive": [
-        14,
-        19,
-        27
+        33,
+        34,
+        44
       ],
       "frame_incognito": [
         25,
@@ -26,9 +26,9 @@
         33
       ],
       "toolbar": [
-        33,
-        34,
-        44
+        14,
+        19,
+        27
       ],
       "toolbar_text": [
         205,
@@ -71,9 +71,9 @@
         221
       ],
       "omnibox_background": [
-        14,
-        19,
-        27
+        25,
+        26,
+        33
       ],
       "omnibox_text": [
         205,
