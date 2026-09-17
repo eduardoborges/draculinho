@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/eduardoborges/draculinho/compare/1.3.0...1.4.0) (2026-09-17)
+
+
+### Bug Fixes
+
+* **chrome:** darken the active tab and lighten the inactive ones ([0935ed8](https://github.com/eduardoborges/draculinho/commit/0935ed862ba86019dce2c0490c2f41f98b913419))
+
+
+### Features
+
+* add OpenCode, lazygit, lazydocker, Xcode, JetBrains and Slack themes ([924eb35](https://github.com/eduardoborges/draculinho/commit/924eb353489c8d7049d08be0fd8b497e7d93d994))
+
 # [1.3.0](https://github.com/eduardoborges/draculinho/compare/1.2.0...1.3.0) (2026-09-05)
 
 
