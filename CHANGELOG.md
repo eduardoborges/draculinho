@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/eduardoborges/draculinho/compare/1.5.0...1.6.0) (2026-09-18)
+
+
+### Features
+
+* **btop:** add a btop theme ([1d2cc6c](https://github.com/eduardoborges/draculinho/commit/1d2cc6cb3656cfb7d0b73e788c6d1af6d010c7cb))
+
 # [1.5.0](https://github.com/eduardoborges/draculinho/compare/1.4.0...1.5.0) (2026-09-18)
 
 
