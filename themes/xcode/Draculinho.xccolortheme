@@ -63,7 +63,7 @@
 	<key>DVTMarkupTextInlineCodeColor</key>
 	<string>0.877929 0.872979 0.878041 0.7</string>
 	<key>DVTMarkupTextLinkColor</key>
-	<string>0.274510 0.321569 0.462745 1</string>
+	<string>0.478431 0.525490 0.678431 1</string>
 	<key>DVTMarkupTextLinkFont</key>
 	<string>.SFNS-Regular - 13.0</string>
 	<key>DVTMarkupTextNormalColor</key>
@@ -119,11 +119,11 @@
 		<key>xcode.syntax.character</key>
 		<string>0.741176 0.576471 0.976471 1</string>
 		<key>xcode.syntax.comment</key>
-		<string>0.274510 0.321569 0.462745 1</string>
+		<string>0.478431 0.525490 0.678431 1</string>
 		<key>xcode.syntax.comment.doc</key>
-		<string>0.274510 0.321569 0.462745 1</string>
+		<string>0.478431 0.525490 0.678431 1</string>
 		<key>xcode.syntax.comment.doc.keyword</key>
-		<string>0.274510 0.321569 0.462745 1</string>
+		<string>0.478431 0.525490 0.678431 1</string>
 		<key>xcode.syntax.declaration.other</key>
 		<string>0.239216 0.811765 0.384314 1</string>
 		<key>xcode.syntax.declaration.type</key>
@@ -167,7 +167,7 @@
 		<key>xcode.syntax.string</key>
 		<string>0.956863 0.976471 0.615686 1</string>
 		<key>xcode.syntax.url</key>
-		<string>0.274510 0.321569 0.462745 1</string>
+		<string>0.478431 0.525490 0.678431 1</string>
 	</dict>
 	<key>DVTSourceTextSyntaxFonts</key>
 	<dict>

@@ -4,7 +4,7 @@ import html, os, re, subprocess
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 OUT = "assets"
-BG, FG, MUTED, SEL, SURF = "#0E131B", "#CDD0DD", "#465276", "#44475A", "#21222C"
+BG, FG, MUTED, SEL, SURF = "#0E131B", "#CDD0DD", "#7a86ad", "#44475A", "#21222C"
 CYAN, GREEN, ORANGE, PINK, PURPLE, RED, YELLOW = "#00B5DC", "#3dcf62", "#FFB86C", "#FF79C6", "#BD93F9", "#FF5555", "#E2DD61"
 QUOTE, TAGP = "#E9F284", "#b65f8f"
 
