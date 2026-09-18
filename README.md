@@ -31,6 +31,7 @@ Dracula, a few shades darker. Made for ligature fonts and italics.
 | Xcode | `sh install.sh xcode` |
 | Android Studio, JetBrains IDEs | `sh install.sh android-studio` |
 | Slack | `sh install.sh slack`, then paste |
+| Luvus | `sh install.sh luvus` |
 
 The script copies each theme into place and points the app's config at it. Run it with no arguments for a menu, name the apps you want, or pass `all`:
 
@@ -56,6 +57,8 @@ curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/insta
 **lazygit and lazydocker.** Merge [`themes/lazygit/config.yml`](./themes/lazygit/config.yml) or [`themes/lazydocker/config.yml`](./themes/lazydocker/config.yml) into the app's `config.yml` (on macOS under `~/Library/Application Support/<app>/`).
 
 **Xcode.** Copy [`themes/xcode/Draculinho.xccolortheme`](./themes/xcode/Draculinho.xccolortheme) to `~/Library/Developer/Xcode/UserData/FontAndColorThemes/` and pick it in Settings > Themes. The fonts point to Dank Mono, so change them there if you use another one.
+
+**Luvus.** Run `luvus theme install themes/luvus/draculinho.toml --yes`, then `luvus theme use draculinho`. Without the CLI, copy the file to `~/.luvus/themes/`.
 
 **Android Studio and other JetBrains IDEs.** Import [`themes/jetbrains/Draculinho.icls`](./themes/jetbrains/Draculinho.icls) in Settings > Editor > Color Scheme. It is a color scheme only, not a UI theme.
 

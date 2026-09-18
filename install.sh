@@ -9,7 +9,7 @@ set -eu
 RAW="https://raw.githubusercontent.com/eduardoborges/draculinho/main/themes"
 HERE="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 CFG="${XDG_CONFIG_HOME:-$HOME/.config}"
-APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack"
+APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus"
 
 # theme <app> <file>: prints the local path of a theme file, downloading it when there is no checkout.
 theme() {
@@ -168,6 +168,17 @@ install_slack() {
   str="$(cat "$(theme slack draculinho.txt)")"
   if command -v pbcopy >/dev/null 2>&1; then printf '%s' "$str" | pbcopy; say "theme string copied to the clipboard."; fi
   say "Slack > Preferences > Themes > Custom theme, paste: $str"
+}
+
+install_luvus() {
+  src="$(theme luvus draculinho.toml)"
+  if command -v luvus >/dev/null 2>&1; then
+    luvus theme install "$src" --yes >/dev/null && luvus theme use draculinho >/dev/null && say "installed and selected in Luvus."
+  else
+    mkdir -p "$HOME/.luvus/themes"
+    cp "$src" "$HOME/.luvus/themes/draculinho.toml"
+    say "copied to ~/.luvus/themes/. Run luvus theme use draculinho."
+  fi
 }
 
 pick() {
