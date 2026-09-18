@@ -9,7 +9,7 @@ set -eu
 RAW="https://raw.githubusercontent.com/eduardoborges/draculinho/main/themes"
 HERE="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 CFG="${XDG_CONFIG_HOME:-$HOME/.config}"
-APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus"
+APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus btop"
 
 # theme <app> <file>: prints the local path of a theme file, downloading it when there is no checkout.
 theme() {
@@ -179,6 +179,19 @@ install_luvus() {
     cp "$src" "$HOME/.luvus/themes/draculinho.toml"
     say "copied to ~/.luvus/themes/. Run luvus theme use draculinho."
   fi
+}
+
+install_btop() {
+  mkdir -p "$CFG/btop/themes"
+  cp "$(theme btop draculinho.theme)" "$CFG/btop/themes/draculinho.theme"
+  conf="$CFG/btop/btop.conf"
+  touch "$conf"
+  if grep -qE '^color_theme *=' "$conf"; then
+    sed -i.bak -E 's|^color_theme *=.*|color_theme = "draculinho"|' "$conf" && rm -f "$conf.bak"
+  else
+    printf 'color_theme = "draculinho"\n' >> "$conf"
+  fi
+  say "color_theme set in $conf. Restart btop."
 }
 
 pick() {
