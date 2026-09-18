@@ -1,3 +1,23 @@
+# [1.5.0](https://github.com/eduardoborges/draculinho/compare/1.4.0...1.5.0) (2026-09-18)
+
+
+### Bug Fixes
+
+* **claude-code:** lighten muted text ([c0f68f2](https://github.com/eduardoborges/draculinho/commit/c0f68f2a5c9cd3942e048e4cdaae42e8aed199e3))
+* **ghostty, herdr:** lighten dim grays ([aad5bae](https://github.com/eduardoborges/draculinho/commit/aad5bae09e4dfd751a232971957658d9abf449d6))
+* **ghostty:** raise faint text opacity ([47b2364](https://github.com/eduardoborges/draculinho/commit/47b23640f295a67e3ff7f19df7cf7041232bb384))
+* **herdr:** lighten muted text ([fd86bb6](https://github.com/eduardoborges/draculinho/commit/fd86bb697655978b36bfef42bc456fe1be410245))
+* lighten muted text to [#7](https://github.com/eduardoborges/draculinho/issues/7)a86ad in editor themes ([4afdf46](https://github.com/eduardoborges/draculinho/commit/4afdf46adf6afe185d6364cc6159c5fce9eed243)), closes [#7a86ad](https://github.com/eduardoborges/draculinho/issues/7a86ad)
+* **luvus:** lighten inactive tabs ([fbe5e52](https://github.com/eduardoborges/draculinho/commit/fbe5e52a0981b2aa937cc0dd27e9695b2f7b1edd))
+
+
+### Features
+
+* **claude-code:** make user messages violet ([fe4a864](https://github.com/eduardoborges/draculinho/commit/fe4a8649133e9e722cbb3b39ea6c7f1cc1c3fb34))
+* **claude-code:** tint user messages cyan ([e9f1592](https://github.com/eduardoborges/draculinho/commit/e9f15920012afa882a65d461a78146dd059ecb0a))
+* **claude-code:** tint user messages magenta ([c90b589](https://github.com/eduardoborges/draculinho/commit/c90b589a4599fdccff3c0191b5cd44c73076824f))
+* **luvus:** add a Luvus theme ([9bcbf9a](https://github.com/eduardoborges/draculinho/commit/9bcbf9a8b534a2063dbb106865bc3e90516ae19a))
+
 # [1.4.0](https://github.com/eduardoborges/draculinho/compare/1.3.0...1.4.0) (2026-09-17)
 
 
