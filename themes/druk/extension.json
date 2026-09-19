@@ -1,0 +1,139 @@
+{
+  "id": "draculinho",
+  "name": "Draculinho",
+  "version": "1.0.0",
+  "description": "Dracula, a few shades darker. Palette from https://github.com/eduardoborges/draculinho",
+  "themes": [
+    {
+      "id": "draculinho",
+      "name": "Draculinho",
+      "ui": {
+        "bg": "#0E131B",
+        "panelBg": "#0B0F16",
+        "barBg": "#0A0E14",
+        "statusBg": "#BD93F9",
+        "statusFg": "#0E131B",
+        "text": "#CDD0DD",
+        "dim": "#7a86ad",
+        "faint": "#44475A",
+        "accent": "#BD93F9",
+        "activeTabFg": "#CDD0DD",
+        "inactiveTabFg": "#7a86ad",
+        "treeSelectedBg": "#44475A",
+        "treeFocusBg": "#21222C",
+        "dirty": "#E2DD61",
+        "error": "#FF5555",
+        "folder": "#CDD0DD",
+        "cursor": "#CDD0DD",
+        "scrollbar": "#7a86ad",
+        "gutter": "#7a86ad",
+        "currentLine": "#151A24",
+        "indentGuide": "#1c2636",
+        "gitAdded": "#3dcf62",
+        "gitModified": "#E2DD61",
+        "gitDeleted": "#FF5555"
+      },
+      "syntax": {
+        "comment": {
+          "fg": "#7a86ad",
+          "italic": true
+        },
+        "keyword": {
+          "fg": "#FF79C6"
+        },
+        "string": {
+          "fg": "#E2DD61"
+        },
+        "number": {
+          "fg": "#BD93F9"
+        },
+        "boolean": {
+          "fg": "#BD93F9"
+        },
+        "constant": {
+          "fg": "#BD93F9"
+        },
+        "function": {
+          "fg": "#3dcf62"
+        },
+        "constructor": {
+          "fg": "#3dcf62"
+        },
+        "type": {
+          "fg": "#00B5DC"
+        },
+        "namespace": {
+          "fg": "#00B5DC"
+        },
+        "variable": {
+          "fg": "#CDD0DD"
+        },
+        "variable.builtin": {
+          "fg": "#BD93F9"
+        },
+        "variable.member": {
+          "fg": "#CDD0DD"
+        },
+        "property": {
+          "fg": "#00B5DC"
+        },
+        "attribute": {
+          "fg": "#3dcf62"
+        },
+        "tag": {
+          "fg": "#FF79C6"
+        },
+        "operator": {
+          "fg": "#FF79C6"
+        },
+        "punctuation": {
+          "fg": "#CDD0DD"
+        },
+        "punctuation.special": {
+          "fg": "#FF79C6"
+        },
+        "label": {
+          "fg": "#FFB86C"
+        },
+        "escape": {
+          "fg": "#FFB86C"
+        },
+        "embedded": {
+          "fg": "#CDD0DD"
+        },
+        "error": {
+          "fg": "#FF5555"
+        },
+        "markup.heading": {
+          "fg": "#3dcf62",
+          "bold": true
+        },
+        "markup.strong": {
+          "fg": "#CDD0DD",
+          "bold": true
+        },
+        "markup.italic": {
+          "fg": "#CDD0DD",
+          "italic": true
+        },
+        "markup.raw": {
+          "fg": "#E2DD61"
+        },
+        "markup.link": {
+          "fg": "#E2DD61"
+        },
+        "markup.link.url": {
+          "fg": "#E2DD61",
+          "underline": true
+        },
+        "markup.list": {
+          "fg": "#FF79C6"
+        },
+        "markup.quote": {
+          "fg": "#7a86ad",
+          "italic": true
+        }
+      }
+    }
+  ]
+}
