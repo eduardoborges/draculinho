@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/eduardoborges/draculinho/compare/1.6.0...1.7.0) (2026-09-19)
+
+
+### Features
+
+* **druk:** add a druk theme ([49d47b1](https://github.com/eduardoborges/draculinho/commit/49d47b1e88077423e5fcf1df77604a1c7ad34a29))
+
 # [1.6.0](https://github.com/eduardoborges/draculinho/compare/1.5.0...1.6.0) (2026-09-18)
 
 
