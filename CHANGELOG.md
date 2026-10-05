@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/eduardoborges/draculinho/compare/1.7.0...1.8.0) (2026-10-05)
+
+
+### Features
+
+* **spotifast:** add a spotifast theme ([fc191b3](https://github.com/eduardoborges/draculinho/commit/fc191b328a31de55e77d70a12be3a742e14f322a))
+
 # [1.7.0](https://github.com/eduardoborges/draculinho/compare/1.6.0...1.7.0) (2026-09-19)
 
 
