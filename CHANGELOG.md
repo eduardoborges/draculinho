@@ -1,3 +1,11 @@
+# [1.9.0](https://github.com/eduardoborges/draculinho/compare/1.8.0...1.9.0) (2026-10-05)
+
+
+### Features
+
+* **wallpaper:** add dots, crosses and rings wallpapers ([faf93ea](https://github.com/eduardoborges/draculinho/commit/faf93ea92173f35cacbd77109f7cbbf4e6ee422c))
+* **wallpaper:** set the wallpaper on every Space from install.sh ([d007957](https://github.com/eduardoborges/draculinho/commit/d0079575081ce660983b0530fdbf2bdfbf81d558))
+
 # [1.8.0](https://github.com/eduardoborges/draculinho/compare/1.7.0...1.8.0) (2026-10-05)
 
 
