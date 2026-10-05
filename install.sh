@@ -9,7 +9,7 @@ set -eu
 RAW="https://raw.githubusercontent.com/eduardoborges/draculinho/main/themes"
 HERE="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 CFG="${XDG_CONFIG_HOME:-$HOME/.config}"
-APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus btop druk spotifast"
+APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus btop druk spotifast wallpaper"
 
 # theme <app> <file>: prints the local path of a theme file, downloading it when there is no checkout.
 theme() {
@@ -206,6 +206,48 @@ install_spotifast() {
   cp "$(theme spotifast Draculinho.json)" "$dir/Draculinho.json"
   command -v spotifast >/dev/null 2>&1 && spotifast reload-themes >/dev/null 2>&1 || true
   say "copied to $dir/. Pick Draculinho in Settings > Appearance > Theme."
+}
+
+install_wallpaper() {
+  name="${WALLPAPER:-dots}"
+  if [ "$(uname)" != Darwin ]; then
+    say "only macOS is automated. Set themes/wallpaper/$name.png in your desktop settings."
+    return
+  fi
+  dest="$CFG/draculinho/wallpaper/$name.png"
+  mkdir -p "$(dirname "$dest")"
+  cp "$(theme wallpaper "$name.png")" "$dest"
+  osascript -e "tell application \"System Events\" to tell every desktop to set picture to POSIX file \"$dest\""
+  # macOS only sets the current Space, so copy its entry to every other Space in the wallpaper store.
+  python3 - "$dest" <<'PY'
+import copy, os, plistlib, sys, time
+p = os.path.expanduser("~/Library/Application Support/com.apple.wallpaper/Store/Index.plist")
+
+def nodes(n):
+    if isinstance(n, dict):
+        if "Desktop" in n:
+            yield n
+        for v in n.values():
+            yield from nodes(v)
+
+def points_to(n, path):
+    cfg = n["Desktop"]["Content"]["Choices"][0].get("Configuration")
+    return bool(cfg) and path in plistlib.loads(cfg).get("url", {}).get("relative", "")
+
+for _ in range(20):
+    d = plistlib.load(open(p, "rb"))
+    src = next((n["Desktop"] for n in nodes(d) if points_to(n, sys.argv[1])), None)
+    if src:
+        break
+    time.sleep(0.25)
+else:
+    sys.exit("wallpaper store never picked up the new image")
+for n in nodes(d):
+    n["Desktop"] = copy.deepcopy(src)
+plistlib.dump(d, open(p, "wb"), fmt=plistlib.FMT_BINARY)
+PY
+  killall WallpaperAgent 2>/dev/null || true
+  say "$name set on every Space. Pick another with WALLPAPER=crosses or WALLPAPER=rings."
 }
 
 pick() {

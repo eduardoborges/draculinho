@@ -35,6 +35,7 @@ Dracula, a few shades darker. Made for ligature fonts and italics.
 | btop | `sh install.sh btop` |
 | druk | `sh install.sh druk` |
 | Spotifast | `sh install.sh spotifast` |
+| Wallpaper (macOS) | `sh install.sh wallpaper` |
 
 The script copies each theme into place and points the app's config at it. Run it with no arguments for a menu, name the apps you want, or pass `all`:
 
@@ -104,6 +105,8 @@ Ghostty and Zed's terminal share the same sixteen ANSI colors. Herdr gets `[them
 </div>
 
 Three wallpapers at 5120x3200 in [`themes/wallpaper`](./themes/wallpaper): dots, crosses and rings. Each PNG is rendered from the SVG next to it. Edit the SVG to change a color or move the bat, then run `rsvg-convert -w 5120 -h 3200 dots.svg -o dots.png`.
+
+On macOS, `sh install.sh wallpaper` sets dots on every Space. Pass `WALLPAPER=crosses` or `WALLPAPER=rings` for the others.
 
 ## Fonts
 
