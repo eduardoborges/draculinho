@@ -34,6 +34,7 @@ Dracula, a few shades darker. Made for ligature fonts and italics.
 | Luvus | `sh install.sh luvus` |
 | btop | `sh install.sh btop` |
 | druk | `sh install.sh druk` |
+| Spotifast | `sh install.sh spotifast` |
 
 The script copies each theme into place and points the app's config at it. Run it with no arguments for a menu, name the apps you want, or pass `all`:
 
@@ -63,6 +64,8 @@ curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/insta
 **btop.** Copy [`themes/btop/draculinho.theme`](./themes/btop/draculinho.theme) to `~/.config/btop/themes/` and set `color_theme = "draculinho"` in `btop.conf`, or pick it with `Esc > Options`.
 
 **druk.** Copy [`themes/druk/extension.json`](./themes/druk/extension.json) to `~/.config/druk/extensions/draculinho/`, press r in the extensions panel and pick Draculinho.
+
+**Spotifast.** Copy [`themes/spotifast/Draculinho.json`](./themes/spotifast/Draculinho.json) to the `themes` folder next to Spotifast's `settings.json` (`~/Library/Application Support/me.paolino.spotifast/themes/` on macOS, `~/.config/spotifast/themes/` on Linux), run `spotifast reload-themes` and pick Draculinho in Settings > Appearance > Theme.
 
 **Luvus.** Run `luvus theme install themes/luvus/draculinho.toml --yes`, then `luvus theme use draculinho`. Without the CLI, copy the file to `~/.luvus/themes/`.
 

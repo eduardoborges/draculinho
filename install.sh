@@ -9,7 +9,7 @@ set -eu
 RAW="https://raw.githubusercontent.com/eduardoborges/draculinho/main/themes"
 HERE="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 CFG="${XDG_CONFIG_HOME:-$HOME/.config}"
-APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus btop druk"
+APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus btop druk spotifast"
 
 # theme <app> <file>: prints the local path of a theme file, downloading it when there is no checkout.
 theme() {
@@ -198,6 +198,14 @@ install_druk() {
   mkdir -p "$CFG/druk/extensions/draculinho"
   cp "$(theme druk extension.json)" "$CFG/druk/extensions/draculinho/extension.json"
   say "copied to $CFG/druk/extensions/draculinho/. Press r in the extensions panel and pick Draculinho."
+}
+
+install_spotifast() {
+  case "$(uname)" in Darwin) dir="$HOME/Library/Application Support/me.paolino.spotifast/themes" ;; *) dir="$CFG/spotifast/themes" ;; esac
+  mkdir -p "$dir"
+  cp "$(theme spotifast Draculinho.json)" "$dir/Draculinho.json"
+  command -v spotifast >/dev/null 2>&1 && spotifast reload-themes >/dev/null 2>&1 || true
+  say "copied to $dir/. Pick Draculinho in Settings > Appearance > Theme."
 }
 
 pick() {
