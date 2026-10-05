@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <pattern id="p" x="0" y="40" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M32 27v10M27 32h10" stroke="#465276" stroke-width="1.4"/>
+    </pattern>
+    <radialGradient id="f" cx="1504" cy="904" r="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="m"><rect width="1600" height="1000" fill="url(#f)"/></mask>
+    <clipPath id="c"><rect x="90" y="90" width="1420" height="820"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="#0e131b"/>
+  <rect width="1600" height="1000" fill="url(#p)" mask="url(#m)" clip-path="url(#c)"/>
+  <path d="M1376 771v10M1371 776h10" stroke="#ff79c6" stroke-width="2"/>
+  <path d="M1184 835v10M1179 840h10" stroke="#bd93f9" stroke-width="2"/>
+  <path transform="translate(92 92) scale(.5)" fill="#bd93f9" fill-opacity=".5" d="M18 8C8 30 8 55 14 74Q23 62 32 74Q41 62 50 74Q59 62 68 74Q77 62 86 74C92 55 92 30 82 8C78 30 72 45 61 50A12 12 0 1 0 39 50C28 45 22 30 18 8Z"/>
+</svg>

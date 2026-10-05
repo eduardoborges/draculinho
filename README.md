@@ -95,6 +95,16 @@ Ghostty and Zed's terminal share the same sixteen ANSI colors. Herdr gets `[them
 <img src="./assets/preview-css.png" width="700" alt="CSS in Draculinho" />
 </div>
 
+## Wallpaper
+
+<div align="center">
+<img src="./themes/wallpaper/dots.png" width="280" alt="Dots wallpaper" />
+<img src="./themes/wallpaper/crosses.png" width="280" alt="Crosses wallpaper" />
+<img src="./themes/wallpaper/rings.png" width="280" alt="Rings wallpaper" />
+</div>
+
+Three wallpapers at 5120x3200 in [`themes/wallpaper`](./themes/wallpaper): dots, crosses and rings. Each PNG is rendered from the SVG next to it. Edit the SVG to change a color or move the bat, then run `rsvg-convert -w 5120 -h 3200 dots.svg -o dots.png`.
+
 ## Fonts
 
 The previews use [Dank Mono](https://philpl.gumroad.com/l/dank-mono). [JetBrains Mono](https://www.jetbrains.com/lp/mono/), [Fira Code](https://github.com/tonsky/FiraCode) and [Cascadia Code](https://github.com/microsoft/cascadia-code) also have proper italics. In VS Code, turn ligatures on and, if you like, italic comments too:

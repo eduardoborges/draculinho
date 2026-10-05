@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="f" cx="96" cy="904" r="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="m"><rect width="1600" height="1000" fill="url(#f)"/></mask>
+    <clipPath id="c"><rect x="96" y="96" width="1408" height="808"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="#0e131b"/>
+  <g fill="none" stroke="#465276" stroke-width="1.2" mask="url(#m)" clip-path="url(#c)">
+    <circle cx="96" cy="904" r="40"/>
+    <circle cx="96" cy="904" r="80"/>
+    <circle cx="96" cy="904" r="120"/>
+    <circle cx="96" cy="904" r="160"/>
+    <circle cx="96" cy="904" r="200"/>
+    <circle cx="96" cy="904" r="240"/>
+    <circle cx="96" cy="904" r="280"/>
+    <circle cx="96" cy="904" r="320"/>
+    <circle cx="96" cy="904" r="360"/>
+    <circle cx="96" cy="904" r="400"/>
+    <circle cx="96" cy="904" r="440"/>
+    <circle cx="96" cy="904" r="480"/>
+    <circle cx="96" cy="904" r="520"/>
+    <circle cx="96" cy="904" r="560"/>
+    <circle cx="96" cy="904" r="600"/>
+    <circle cx="96" cy="904" r="640"/>
+    <circle cx="96" cy="904" r="680"/>
+    <circle cx="96" cy="904" r="720"/>
+    <circle cx="96" cy="904" r="760"/>
+    <circle cx="96" cy="904" r="800"/>
+    <circle cx="96" cy="904" r="840"/>
+    <circle cx="96" cy="904" r="880"/>
+    <circle cx="96" cy="904" r="920"/>
+    <circle cx="96" cy="904" r="960"/>
+    <circle cx="96" cy="904" r="1000"/>
+    <circle cx="96" cy="904" r="1040"/>
+    <circle cx="96" cy="904" r="1080"/>
+  </g>
+  <circle cx="96" cy="904" r="480" fill="none" stroke="#bd93f9" stroke-width="1.6" stroke-opacity=".7" clip-path="url(#c)"/>
+  <path transform="translate(1458 92) scale(.5)" fill="#bd93f9" fill-opacity=".5" d="M18 8C8 30 8 55 14 74Q23 62 32 74Q41 62 50 74Q59 62 68 74Q77 62 86 74C92 55 92 30 82 8C78 30 72 45 61 50A12 12 0 1 0 39 50C28 45 22 30 18 8Z"/>
+</svg>

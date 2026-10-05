@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <pattern id="p" x="80" y="80" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="1.4" fill="#465276"/>
+    </pattern>
+    <radialGradient id="f" cx="96" cy="96" r="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="m"><rect width="1600" height="1000" fill="url(#f)"/></mask>
+    <clipPath id="c"><rect x="90" y="90" width="1420" height="820"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="#0e131b"/>
+  <rect width="1600" height="1000" fill="url(#p)" mask="url(#m)" clip-path="url(#c)"/>
+  <g fill-opacity=".9">
+    <circle cx="288" cy="224" r="2.6" fill="#bd93f9"/>
+    <circle cx="448" cy="160" r="2.6" fill="#ff79c6"/>
+    <circle cx="192" cy="416" r="2.6" fill="#00b5dc"/>
+    <circle cx="576" cy="352" r="2.6" fill="#3dcf62"/>
+  </g>
+  <path transform="translate(1458 867) scale(.5)" fill="#bd93f9" fill-opacity=".5" d="M18 8C8 30 8 55 14 74Q23 62 32 74Q41 62 50 74Q59 62 68 74Q77 62 86 74C92 55 92 30 82 8C78 30 72 45 61 50A12 12 0 1 0 39 50C28 45 22 30 18 8Z"/>
+</svg>
