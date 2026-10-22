@@ -80,7 +80,7 @@ curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/insta
 
 <img src="./assets/palette.png" alt="Draculinho palette" />
 
-Draculinho keeps Dracula's hues and drops the background from `#282A36` to `#1E1F29`. Green, cyan and yellow are pulled back a notch so they don't glow against the darker ground, and comments sit at `#465276`, dim enough to read past. Keywords, storage types and `this` are italic, which is where a font with a real italic earns its place.
+Draculinho keeps Dracula's hues and drops the background from `#282A36` to `#1E1F29`. Green, cyan and yellow are pulled back a notch so they don't glow against the darker ground, and comments sit at `#7A86AD`, dim enough to read past. Keywords, storage types and `this` are italic, which is where a font with a real italic earns its place.
 
 ## Terminal
 
