@@ -187,7 +187,11 @@ install_btop() {
   conf="$CFG/btop/btop.conf"
   touch "$conf"
   if grep -qE '^color_theme *=' "$conf"; then
-    sed -i.bak -E 's|^color_theme *=.*|color_theme = "draculinho"|' "$conf" && rm -f "$conf.bak"
+    # btop.conf is often a symlink into dotfiles, and sed -i on macOS refuses those.
+    tmp="$(mktemp)"
+    sed -E 's|^color_theme *=.*|color_theme = "draculinho"|' "$conf" > "$tmp"
+    cat "$tmp" > "$conf"
+    rm -f "$tmp"
   else
     printf 'color_theme = "draculinho"\n' >> "$conf"
   fi
