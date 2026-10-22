@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Renders the README previews with headless Chrome. Run from the repo root: python3 scripts/previews.py"""
-import html, os, re, subprocess
+import html, json, os, re, subprocess
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 OUT = "assets"
-BG, FG, MUTED, SEL, SURF = "#1E1F29", "#CDD0DD", "#7a86ad", "#44475A", "#21222C"
-CYAN, GREEN, ORANGE, PINK, PURPLE, RED, YELLOW = "#00B5DC", "#3dcf62", "#FFB86C", "#FF79C6", "#BD93F9", "#FF5555", "#E2DD61"
+P = json.load(open("palette.json"))
+BG, FG, MUTED, SEL, SURF = P["bg"], P["fg"], P["comment"], P["selection"], P["bg_alt"]
+CYAN, GREEN, ORANGE, PINK, PURPLE, RED, YELLOW = P["cyan"], P["green"], P["orange"], P["pink"], P["purple"], P["red"], P["yellow"]
 QUOTE, TAGP = "#E9F284", "#b65f8f"
 
 # Token classes follow the VS Code theme: [[k:const]] -> keyword, pink italic.
@@ -108,8 +109,8 @@ TERMINAL = """[[cy:~/Projects/draculinho]] [[pu: main]] [[m:v1.3.0]]
 [[gr:❯]] sh install.sh zed ghostty herdr claude-code
 [[or:✻]] [[or:Installing…]]"""
 
-ANSI = [("#21222C", "black"), (RED, "red"), (GREEN, "green"), (YELLOW, "yellow"), (PURPLE, "blue"), (PINK, "magenta"), (CYAN, "cyan"), (FG, "white"),
-        (MUTED, ""), ("#FF6E6E", ""), ("#69FF94", ""), ("#FFFFA5", ""), ("#D6ACFF", ""), ("#FF92DF", ""), ("#A4FFFF", ""), ("#FFFFFF", "")]
+ANSI = [(SURF, "black"), (RED, "red"), (GREEN, "green"), (YELLOW, "yellow"), (PURPLE, "blue"), (PINK, "magenta"), (CYAN, "cyan"), (FG, "white"),
+        (MUTED, "")] + [(P["bright_" + c], "") for c in ("red", "green", "yellow", "purple", "pink", "cyan", "white")]
 
 PALETTE = [(BG, "Background"), (FG, "Foreground"), (PURPLE, "Purple"), (PINK, "Pink"), (CYAN, "Cyan"), (GREEN, "Green"), (ORANGE, "Orange"), (RED, "Red"), (YELLOW, "Yellow"), (MUTED, "Comment")]
 
