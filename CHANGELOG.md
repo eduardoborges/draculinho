@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/eduardoborges/draculinho/compare/1.9.0...1.10.0) (2026-10-22)
+
+
+### Bug Fixes
+
+* **btop:** write btop.conf through symlinks ([f8ceff9](https://github.com/eduardoborges/draculinho/commit/f8ceff96e0ccdd1e1cbef3604bc4d7d4548f9078))
+
+
+### Features
+
+* lighten the background to [#1](https://github.com/eduardoborges/draculinho/issues/1)E1F29 ([d43a0ec](https://github.com/eduardoborges/draculinho/commit/d43a0ecd42a0dea12d54a65dc59cb0d8706112c7)), closes [#1E1F29](https://github.com/eduardoborges/draculinho/issues/1E1F29) [#0E131B](https://github.com/eduardoborges/draculinho/issues/0E131B) [#282A36](https://github.com/eduardoborges/draculinho/issues/282A36)
+
 # [1.9.0](https://github.com/eduardoborges/draculinho/compare/1.8.0...1.9.0) (2026-10-05)
 
 
