@@ -39,7 +39,7 @@
 	<key>DVTConsoleTextBackgroundColor</key>
 	<string>0.054902 0.074510 0.105882 1</string>
 	<key>DVTConsoleTextInsertionPointColor</key>
-	<string>1 1 1 1</string>
+	<string>1.000000 1.000000 1.000000 1</string>
 	<key>DVTConsoleTextSelectionColor</key>
 	<string>0.266667 0.278431 0.352941 1</string>
 	<key>DVTDebuggerInstructionPointerColor</key>
@@ -101,13 +101,13 @@
 	<key>DVTScrollbarMarkerWarningColor</key>
 	<string>0.937255 0.717647 0.34902 1</string>
 	<key>DVTSourceTextBackground</key>
-	<string>0.117658 0.122153 0.159778 1</string>
+	<string>0.117647 0.121569 0.160784 1</string>
 	<key>DVTSourceTextBlockDimBackgroundColor</key>
 	<string>0.5 0.5 0.5 1</string>
 	<key>DVTSourceTextCurrentLineHighlightColor</key>
 	<string>0.15491 0.161222 0.208069 1</string>
 	<key>DVTSourceTextInsertionPointColor</key>
-	<string>1 1 1 1</string>
+	<string>1.000000 1.000000 1.000000 1</string>
 	<key>DVTSourceTextInvisiblesColor</key>
 	<string>0.496379 0.5 0.5 1</string>
 	<key>DVTSourceTextSelectionColor</key>
@@ -153,7 +153,7 @@
 		<key>xcode.syntax.identifier.variable.system</key>
 		<string>0.993219 0.670779 0.325461 1</string>
 		<key>xcode.syntax.keyword</key>
-		<string>1 0.47451 0.776471 1</string>
+		<string>1.000000 0.474510 0.776471 1</string>
 		<key>xcode.syntax.mark</key>
 		<string>0.965525 0.966426 0.936183 1</string>
 		<key>xcode.syntax.markup.code</key>

@@ -14,28 +14,28 @@
         "statusBg": "#BD93F9",
         "statusFg": "#1E1F29",
         "text": "#CDD0DD",
-        "dim": "#7a86ad",
+        "dim": "#7A86AD",
         "faint": "#44475A",
         "accent": "#BD93F9",
         "activeTabFg": "#CDD0DD",
-        "inactiveTabFg": "#7a86ad",
+        "inactiveTabFg": "#7A86AD",
         "treeSelectedBg": "#44475A",
         "treeFocusBg": "#21222C",
         "dirty": "#E2DD61",
         "error": "#FF5555",
         "folder": "#CDD0DD",
         "cursor": "#CDD0DD",
-        "scrollbar": "#7a86ad",
-        "gutter": "#7a86ad",
+        "scrollbar": "#7A86AD",
+        "gutter": "#7A86AD",
         "currentLine": "#151A24",
-        "indentGuide": "#1c2636",
-        "gitAdded": "#3dcf62",
+        "indentGuide": "#1C2636",
+        "gitAdded": "#3DCF62",
         "gitModified": "#E2DD61",
         "gitDeleted": "#FF5555"
       },
       "syntax": {
         "comment": {
-          "fg": "#7a86ad",
+          "fg": "#7A86AD",
           "italic": true
         },
         "keyword": {
@@ -54,10 +54,10 @@
           "fg": "#BD93F9"
         },
         "function": {
-          "fg": "#3dcf62"
+          "fg": "#3DCF62"
         },
         "constructor": {
-          "fg": "#3dcf62"
+          "fg": "#3DCF62"
         },
         "type": {
           "fg": "#00B5DC"
@@ -78,7 +78,7 @@
           "fg": "#00B5DC"
         },
         "attribute": {
-          "fg": "#3dcf62"
+          "fg": "#3DCF62"
         },
         "tag": {
           "fg": "#FF79C6"
@@ -105,7 +105,7 @@
           "fg": "#FF5555"
         },
         "markup.heading": {
-          "fg": "#3dcf62",
+          "fg": "#3DCF62",
           "bold": true
         },
         "markup.strong": {
@@ -130,7 +130,7 @@
           "fg": "#FF79C6"
         },
         "markup.quote": {
-          "fg": "#7a86ad",
+          "fg": "#7A86AD",
           "italic": true
         }
       }

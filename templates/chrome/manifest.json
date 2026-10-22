@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Draculinho",
+  "version": "1.0.0",
+  "description": "A darker, moodier take on Dracula.",
+  "theme": {
+    "colors": {
+      "frame": {{bg_raised}},
+      "frame_inactive": {{bg_alt}},
+      "frame_incognito": {{bg_sunken}},
+      "frame_incognito_inactive": {{bg_sunken}},
+      "toolbar": {{bg_deep}},
+      "toolbar_text": {{fg}},
+      "toolbar_button_icon": {{fg}},
+      "tab_text": {{fg}},
+      "tab_background_text": {{subtext}},
+      "tab_background_text_inactive": {{border}},
+      "tab_background_text_incognito": {{subtext}},
+      "tab_background_text_incognito_inactive": {{border}},
+      "bookmark_text": {{fg}},
+      "omnibox_background": {{bg_sunken}},
+      "omnibox_text": {{fg}},
+      "button_background": {{bg_raised}},
+      "ntp_background": {{bg_deep}},
+      "ntp_text": {{fg}},
+      "ntp_link": {{purple}},
+      "ntp_header": {{border}}
+    }
+  }
+}

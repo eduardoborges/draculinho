@@ -1,0 +1,15 @@
+# Draculinho for lazygit. Merge under gui: in ~/Library/Application Support/lazygit/config.yml
+gui:
+  theme:
+    activeBorderColor: ["{{purple}}", bold]
+    inactiveBorderColor: ["{{border}}"]
+    searchingActiveBorderColor: ["{{orange}}", bold]
+    optionsTextColor: ["{{cyan}}"]
+    selectedLineBgColor: ["{{bg_raised}}"]
+    inactiveViewSelectedLineBgColor: ["{{bg_alt}}"]
+    cherryPickedCommitFgColor: ["{{cyan}}"]
+    cherryPickedCommitBgColor: ["{{purple}}"]
+    markedBaseCommitFgColor: ["{{cyan}}"]
+    markedBaseCommitBgColor: ["{{yellow}}"]
+    unstagedChangesColor: ["{{red}}"]
+    defaultFgColor: ["{{fg}}"]

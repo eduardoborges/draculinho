@@ -126,7 +126,7 @@ The previews use [Dank Mono](https://philpl.gumroad.com/l/dank-mono). [JetBrains
 
 ## Development
 
-Each port lives in `themes/<app>/`. The VS Code theme is the reference and the others follow its colors. `python3 scripts/previews.py` regenerates the images in `assets/` with headless Chrome.
+Colors live in `palette.json`. Each port has a template in `templates/<app>/` that marks palette colors as `{{name}}`, and `python3 scripts/build.py` renders it into `themes/<app>/`. Edit the template, since the build overwrites the file in `themes/`. A color that only one app uses stays hardcoded in that app's template. `python3 scripts/previews.py` regenerates the images in `assets/` with headless Chrome.
 
 Releases come from conventional commits on `main`. `feat:` bumps the minor version, `fix:` the patch. CI then publishes to the VS Code Marketplace and Open VSX. The Chrome Web Store job runs once its credentials are set.
 

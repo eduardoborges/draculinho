@@ -1,0 +1,330 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+  "name": "Draculinho",
+  "author": "Eduardo Borges",
+  "themes": [
+    {
+      "name": "Draculinho",
+      "appearance": "dark",
+      "style": {
+        "border": "{{divider}}",
+        "border.variant": "{{bg_sunken}}",
+        "border.focused": "{{border}}",
+        "border.selected": "{{purple}}",
+        "border.transparent": "#00000000",
+        "border.disabled": "{{bg_sunken}}",
+        "elevated_surface.background": "{{bg_alt}}",
+        "surface.background": "{{bg}}",
+        "background": "{{bg}}",
+        "element.background": "{{bg_alt}}",
+        "element.hover": "{{selection}}75",
+        "element.active": "{{selection}}",
+        "element.selected": "{{selection}}",
+        "element.disabled": "{{bg_alt}}",
+        "drop_target.background": "{{selection}}70",
+        "ghost_element.background": "#00000000",
+        "ghost_element.hover": "{{selection}}75",
+        "ghost_element.active": "{{selection}}",
+        "ghost_element.selected": "{{selection}}",
+        "ghost_element.disabled": "#00000000",
+        "text": "{{fg}}",
+        "text.muted": "{{comment}}",
+        "text.placeholder": "{{comment}}",
+        "text.disabled": "{{comment}}99",
+        "text.accent": "{{pink}}",
+        "icon": "{{fg}}",
+        "icon.muted": "{{comment}}",
+        "icon.disabled": "{{comment}}99",
+        "icon.placeholder": "{{comment}}",
+        "icon.accent": "{{pink}}",
+        "status_bar.background": "{{bg}}",
+        "title_bar.background": "{{bg}}",
+        "title_bar.inactive_background": "{{bg_sunken}}",
+        "toolbar.background": "{{bg}}",
+        "tab_bar.background": "{{bg}}",
+        "tab.inactive_background": "{{bg}}",
+        "tab.active_background": "{{bg}}",
+        "search.match_background": "{{orange}}80",
+        "panel.background": "{{bg}}",
+        "panel.focused_border": "{{purple}}",
+        "panel.indent_guide": "{{guide}}",
+        "panel.indent_guide_active": "{{bright_white}}45",
+        "panel.indent_guide_hover": "{{border}}",
+        "pane.focused_border": null,
+        "pane_group.border": "{{divider}}",
+        "scrollbar.thumb.background": "{{selection}}80",
+        "scrollbar.thumb.hover_background": "{{selection}}",
+        "scrollbar.thumb.border": "{{selection}}",
+        "scrollbar.track.background": "#00000000",
+        "scrollbar.track.border": "{{bg_sunken}}",
+        "editor.foreground": "{{fg}}",
+        "editor.background": "{{bg}}",
+        "editor.gutter.background": "{{bg}}",
+        "editor.subheader.background": "{{bg_alt}}",
+        "editor.active_line.background": "{{purple}}15",
+        "editor.highlighted_line.background": "{{purple}}15",
+        "editor.line_number": "{{comment}}",
+        "editor.active_line_number": "{{fg}}",
+        "editor.hover_line_number": "{{subtext}}",
+        "editor.invisible": "{{guide}}",
+        "editor.wrap_guide": "{{guide}}",
+        "editor.active_wrap_guide": "{{bright_white}}45",
+        "editor.document_highlight.read_background": "{{cyan}}50",
+        "editor.document_highlight.write_background": "{{green}}50",
+        "editor.document_highlight.bracket_background": "{{selection}}",
+        "editor.indent_guide": "{{guide}}",
+        "editor.indent_guide_active": "{{bright_white}}45",
+        "terminal.background": "{{bg}}",
+        "terminal.foreground": "{{fg}}",
+        "terminal.bright_foreground": "{{bright_white}}",
+        "terminal.dim_foreground": "{{comment}}",
+        "terminal.ansi.black": "{{bg_alt}}",
+        "terminal.ansi.bright_black": "{{comment}}",
+        "terminal.ansi.dim_black": "#15161c",
+        "terminal.ansi.red": "{{red}}",
+        "terminal.ansi.bright_red": "{{bright_red}}",
+        "terminal.ansi.dim_red": "#a53737",
+        "terminal.ansi.green": "{{green}}",
+        "terminal.ansi.bright_green": "{{bright_green}}",
+        "terminal.ansi.dim_green": "#27863f",
+        "terminal.ansi.yellow": "{{yellow}}",
+        "terminal.ansi.bright_yellow": "{{bright_yellow}}",
+        "terminal.ansi.dim_yellow": "#928f3f",
+        "terminal.ansi.blue": "{{purple}}",
+        "terminal.ansi.bright_blue": "{{bright_purple}}",
+        "terminal.ansi.dim_blue": "#7a5fa1",
+        "terminal.ansi.magenta": "{{pink}}",
+        "terminal.ansi.bright_magenta": "{{bright_pink}}",
+        "terminal.ansi.dim_magenta": "#a54e80",
+        "terminal.ansi.cyan": "{{cyan}}",
+        "terminal.ansi.bright_cyan": "{{bright_cyan}}",
+        "terminal.ansi.dim_cyan": "#00758f",
+        "terminal.ansi.white": "{{fg}}",
+        "terminal.ansi.bright_white": "{{bright_white}}",
+        "terminal.ansi.dim_white": "#85878f",
+        "link_text.hover": "{{cyan}}",
+        "version_control.added": "{{green}}",
+        "version_control.modified": "{{cyan}}",
+        "version_control.deleted": "{{red}}",
+        "version_control.conflict_marker_ours": "{{green}}90",
+        "version_control.conflict_marker_theirs": "{{purple}}90",
+        "conflict": "{{orange}}",
+        "conflict.background": "{{orange}}1a",
+        "conflict.border": "{{orange}}",
+        "created": "{{green}}",
+        "created.background": "{{green}}1a",
+        "created.border": "{{green}}",
+        "deleted": "{{red}}",
+        "deleted.background": "{{red}}1a",
+        "deleted.border": "{{red}}",
+        "error": "{{red}}",
+        "error.background": "{{red}}1a",
+        "error.border": "{{red}}",
+        "hidden": "{{comment}}",
+        "hidden.background": "{{border}}1a",
+        "hidden.border": "{{border}}",
+        "hint": "{{comment}}",
+        "hint.background": "{{border}}1a",
+        "hint.border": "{{border}}",
+        "ignored": "{{comment}}",
+        "ignored.background": "{{border}}1a",
+        "ignored.border": "{{border}}",
+        "info": "{{cyan}}",
+        "info.background": "{{cyan}}1a",
+        "info.border": "{{cyan}}",
+        "modified": "{{cyan}}",
+        "modified.background": "{{cyan}}1a",
+        "modified.border": "{{cyan}}",
+        "predictive": "{{comment}}99",
+        "predictive.background": "#465276991a",
+        "predictive.border": "{{border}}99",
+        "renamed": "{{purple}}",
+        "renamed.background": "{{purple}}1a",
+        "renamed.border": "{{purple}}",
+        "success": "{{green}}",
+        "success.background": "{{green}}1a",
+        "success.border": "{{green}}",
+        "unreachable": "{{comment}}",
+        "unreachable.background": "{{border}}1a",
+        "unreachable.border": "{{border}}",
+        "warning": "{{orange}}",
+        "warning.background": "{{orange}}1a",
+        "warning.border": "{{orange}}",
+        "players": [
+          {
+            "cursor": "{{fg}}",
+            "background": "{{fg}}",
+            "selection": "{{selection}}"
+          },
+          {
+            "cursor": "{{pink}}",
+            "background": "{{pink}}",
+            "selection": "{{pink}}33"
+          },
+          {
+            "cursor": "{{purple}}",
+            "background": "{{purple}}",
+            "selection": "{{purple}}33"
+          },
+          {
+            "cursor": "{{green}}",
+            "background": "{{green}}",
+            "selection": "{{green}}33"
+          },
+          {
+            "cursor": "{{orange}}",
+            "background": "{{orange}}",
+            "selection": "{{orange}}33"
+          },
+          {
+            "cursor": "{{cyan}}",
+            "background": "{{cyan}}",
+            "selection": "{{cyan}}33"
+          },
+          {
+            "cursor": "{{red}}",
+            "background": "{{red}}",
+            "selection": "{{red}}33"
+          },
+          {
+            "cursor": "{{yellow}}",
+            "background": "{{yellow}}",
+            "selection": "{{yellow}}33"
+          }
+        ],
+        "syntax": {
+          "attribute": {
+            "color": "{{green}}",
+            "font_style": "italic"
+          },
+          "boolean": {
+            "color": "{{purple}}"
+          },
+          "comment": {
+            "color": "{{comment}}"
+          },
+          "comment.doc": {
+            "color": "{{comment}}"
+          },
+          "constant": {
+            "color": "{{purple}}"
+          },
+          "constructor": {
+            "color": "{{cyan}}"
+          },
+          "embedded": {
+            "color": "{{fg}}"
+          },
+          "emphasis": {
+            "color": "{{yellow}}",
+            "font_style": "italic"
+          },
+          "emphasis.strong": {
+            "color": "{{orange}}",
+            "font_weight": 700
+          },
+          "enum": {
+            "color": "{{cyan}}",
+            "font_style": "italic"
+          },
+          "function": {
+            "color": "{{green}}"
+          },
+          "function.method": {
+            "color": "{{green}}"
+          },
+          "hint": {
+            "color": "{{comment}}",
+            "font_style": "italic"
+          },
+          "keyword": {
+            "color": "{{pink}}",
+            "font_style": "italic"
+          },
+          "label": {
+            "color": "{{cyan}}"
+          },
+          "link_text": {
+            "color": "{{pink}}"
+          },
+          "link_uri": {
+            "color": "{{cyan}}"
+          },
+          "number": {
+            "color": "{{purple}}"
+          },
+          "operator": {
+            "color": "{{pink}}"
+          },
+          "predictive": {
+            "color": "{{comment}}99",
+            "font_style": "italic"
+          },
+          "preproc": {
+            "color": "{{pink}}"
+          },
+          "primary": {
+            "color": "{{fg}}"
+          },
+          "property": {
+            "color": "{{fg}}"
+          },
+          "punctuation": {
+            "color": "{{fg}}"
+          },
+          "punctuation.bracket": {
+            "color": "{{fg}}"
+          },
+          "punctuation.delimiter": {
+            "color": "{{fg}}"
+          },
+          "punctuation.list_marker": {
+            "color": "{{cyan}}"
+          },
+          "punctuation.special": {
+            "color": "{{pink}}"
+          },
+          "string": {
+            "color": "{{yellow}}"
+          },
+          "string.escape": {
+            "color": "{{pink}}"
+          },
+          "string.regex": {
+            "color": "{{yellow}}"
+          },
+          "string.special": {
+            "color": "{{orange}}"
+          },
+          "string.special.symbol": {
+            "color": "{{purple}}"
+          },
+          "tag": {
+            "color": "{{pink}}"
+          },
+          "text.literal": {
+            "color": "{{green}}"
+          },
+          "title": {
+            "color": "{{purple}}",
+            "font_weight": 700
+          },
+          "type": {
+            "color": "{{cyan}}",
+            "font_style": "italic"
+          },
+          "variable": {
+            "color": "{{fg}}"
+          },
+          "variable.special": {
+            "color": "{{purple}}",
+            "font_style": "italic"
+          },
+          "variant": {
+            "color": "{{purple}}"
+          }
+        }
+      }
+    }
+  ]
+}

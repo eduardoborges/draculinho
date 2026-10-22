@@ -1,0 +1,139 @@
+{
+  "id": "draculinho",
+  "name": "Draculinho",
+  "version": "1.0.0",
+  "description": "Dracula, a few shades darker. Palette from https://github.com/eduardoborges/draculinho",
+  "themes": [
+    {
+      "id": "draculinho",
+      "name": "Draculinho",
+      "ui": {
+        "bg": "{{bg}}",
+        "panelBg": "{{panel}}",
+        "barBg": "#0A0E14",
+        "statusBg": "{{purple}}",
+        "statusFg": "{{bg}}",
+        "text": "{{fg}}",
+        "dim": "{{comment}}",
+        "faint": "{{selection}}",
+        "accent": "{{purple}}",
+        "activeTabFg": "{{fg}}",
+        "inactiveTabFg": "{{comment}}",
+        "treeSelectedBg": "{{selection}}",
+        "treeFocusBg": "{{bg_alt}}",
+        "dirty": "{{yellow}}",
+        "error": "{{red}}",
+        "folder": "{{fg}}",
+        "cursor": "{{fg}}",
+        "scrollbar": "{{comment}}",
+        "gutter": "{{comment}}",
+        "currentLine": "{{current_line}}",
+        "indentGuide": "{{divider}}",
+        "gitAdded": "{{green}}",
+        "gitModified": "{{yellow}}",
+        "gitDeleted": "{{red}}"
+      },
+      "syntax": {
+        "comment": {
+          "fg": "{{comment}}",
+          "italic": true
+        },
+        "keyword": {
+          "fg": "{{pink}}"
+        },
+        "string": {
+          "fg": "{{yellow}}"
+        },
+        "number": {
+          "fg": "{{purple}}"
+        },
+        "boolean": {
+          "fg": "{{purple}}"
+        },
+        "constant": {
+          "fg": "{{purple}}"
+        },
+        "function": {
+          "fg": "{{green}}"
+        },
+        "constructor": {
+          "fg": "{{green}}"
+        },
+        "type": {
+          "fg": "{{cyan}}"
+        },
+        "namespace": {
+          "fg": "{{cyan}}"
+        },
+        "variable": {
+          "fg": "{{fg}}"
+        },
+        "variable.builtin": {
+          "fg": "{{purple}}"
+        },
+        "variable.member": {
+          "fg": "{{fg}}"
+        },
+        "property": {
+          "fg": "{{cyan}}"
+        },
+        "attribute": {
+          "fg": "{{green}}"
+        },
+        "tag": {
+          "fg": "{{pink}}"
+        },
+        "operator": {
+          "fg": "{{pink}}"
+        },
+        "punctuation": {
+          "fg": "{{fg}}"
+        },
+        "punctuation.special": {
+          "fg": "{{pink}}"
+        },
+        "label": {
+          "fg": "{{orange}}"
+        },
+        "escape": {
+          "fg": "{{orange}}"
+        },
+        "embedded": {
+          "fg": "{{fg}}"
+        },
+        "error": {
+          "fg": "{{red}}"
+        },
+        "markup.heading": {
+          "fg": "{{green}}",
+          "bold": true
+        },
+        "markup.strong": {
+          "fg": "{{fg}}",
+          "bold": true
+        },
+        "markup.italic": {
+          "fg": "{{fg}}",
+          "italic": true
+        },
+        "markup.raw": {
+          "fg": "{{yellow}}"
+        },
+        "markup.link": {
+          "fg": "{{yellow}}"
+        },
+        "markup.link.url": {
+          "fg": "{{yellow}}",
+          "underline": true
+        },
+        "markup.list": {
+          "fg": "{{pink}}"
+        },
+        "markup.quote": {
+          "fg": "{{comment}}",
+          "italic": true
+        }
+      }
+    }
+  ]
+}

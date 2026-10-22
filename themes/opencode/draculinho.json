@@ -5,9 +5,9 @@
     "currentLine": "#21222C",
     "selection": "#44475A",
     "foreground": "#CDD0DD",
-    "comment": "#7a86ad",
+    "comment": "#7A86AD",
     "cyan": "#00B5DC",
-    "green": "#3dcf62",
+    "green": "#3DCF62",
     "orange": "#FFB86C",
     "pink": "#FF79C6",
     "purple": "#BD93F9",
@@ -45,18 +45,18 @@
     },
     "text": {
       "dark": "foreground",
-      "light": "#1e1f29"
+      "light": "#1E1F29"
     },
     "textMuted": {
       "dark": "comment",
       "light": "#465276"
     },
     "background": {
-      "dark": "#1e1f29",
-      "light": "#cdd0dd"
+      "dark": "#1E1F29",
+      "light": "#CDD0DD"
     },
     "backgroundPanel": {
-      "dark": "#21222c",
+      "dark": "#21222C",
       "light": "#e8e8e2"
     },
     "backgroundElement": {
@@ -72,7 +72,7 @@
       "light": "purple"
     },
     "borderSubtle": {
-      "dark": "#191a21",
+      "dark": "#191A21",
       "light": "#e0e0e0"
     },
     "diffAdded": {
@@ -108,7 +108,7 @@
       "light": "#ffe0e0"
     },
     "diffContextBg": {
-      "dark": "#21222c",
+      "dark": "#21222C",
       "light": "#e8e8e2"
     },
     "diffLineNumber": {
@@ -125,7 +125,7 @@
     },
     "markdownText": {
       "dark": "foreground",
-      "light": "#1e1f29"
+      "light": "#1E1F29"
     },
     "markdownHeading": {
       "dark": "purple",
@@ -177,7 +177,7 @@
     },
     "markdownCodeBlock": {
       "dark": "foreground",
-      "light": "#1e1f29"
+      "light": "#1E1F29"
     },
     "syntaxComment": {
       "dark": "comment",
@@ -193,7 +193,7 @@
     },
     "syntaxVariable": {
       "dark": "foreground",
-      "light": "#1e1f29"
+      "light": "#1E1F29"
     },
     "syntaxString": {
       "dark": "yellow",
@@ -213,7 +213,7 @@
     },
     "syntaxPunctuation": {
       "dark": "foreground",
-      "light": "#1e1f29"
+      "light": "#1E1F29"
     }
   }
 }

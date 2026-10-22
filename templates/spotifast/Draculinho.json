@@ -1,0 +1,19 @@
+{
+  "base": "dark",
+  "colors": {
+    "window": "{{bg}}",
+    "panel": "{{panel}}",
+    "surface": "{{current_line}}",
+    "surface_hover": "{{bg_alt}}",
+    "surface_active": "{{selection}}",
+    "outline": "{{divider}}",
+    "text": "{{fg}}",
+    "secondary": "{{comment}}",
+    "dim": "{{border}}",
+    "accent": "{{purple}}",
+    "accent_hover": "{{pink}}",
+    "on_accent": "{{bg}}",
+    "danger": "{{red}}",
+    "warning": "{{orange}}"
+  }
+}

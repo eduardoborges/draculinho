@@ -17,3 +17,5 @@ assets/palette.png
 scripts/
 themes/wallpaper/
 docs/
+templates/
+palette.json
