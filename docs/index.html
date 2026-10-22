@@ -9,14 +9,14 @@
 <link rel="icon" href="https://cdn.jsdelivr.net/gh/eduardoborges/draculinho@main/assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&family=Victor+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&family=JetBrains+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #1E1F29; --panel: #21222C; --edge: #191A21; --line: #44475A;
     --fg: #CDD0DD; --dim: #7A86AD; --comment: #465276;
     --purple: #BD93F9; --pink: #FF79C6; --green: #3dcf62; --cyan: #00B5DC;
     --yellow: #E2DD61; --orange: #FFB86C; --red: #FF5555;
-    --mono: "Victor Mono", ui-monospace, monospace;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
   }
   * { box-sizing: border-box; margin: 0; }
   html { scroll-behavior: smooth; }
@@ -151,7 +151,7 @@
       </div>
 <pre id="tsx"><span class="l"><span class="k">import</span> { <span class="f">useState</span> } <span class="k">from</span> <span class="s">"react"</span>;</span><span class="l"> </span><span class="l"><span class="c">// Keywords, types and `this` are italic. Ligatures do the rest: =&gt; !== &gt;=</span></span><span class="l"><span class="k">type</span> <span class="t">Props</span> = { <span class="p">name</span>: <span class="t">string</span>; <span class="p">fangs</span>?: <span class="t">number</span> };</span><span class="l"> </span><span class="l hl"><span class="k">export</span> <span class="k">function</span> <span class="f">Profile</span>({ <span class="p">name</span>, <span class="p">fangs</span> = <span class="n">2</span> }: <span class="t">Props</span>) {</span><span class="l">  <span class="k">const</span> [<span class="n">awake</span>, <span class="f">setAwake</span>] = <span class="f">useState</span>(<span class="n">false</span>);</span><span class="l">  <span class="k">const</span> <span class="n">greeting</span> = <span class="n">fangs</span> &gt;= <span class="n">2</span> ? <span class="s">`Good evening, ${</span>name<span class="s">}`</span> : <span class="s">"Hi"</span>;</span><span class="l"> </span><span class="l">  <span class="k">return</span> (</span><span class="l">    &lt;<span class="tg">section</span> <span class="a">className</span>=<span class="s">"profile"</span> <span class="a">onClick</span>={() =&gt; <span class="f">setAwake</span>(!<span class="n">awake</span>)}&gt;</span><span class="l">      &lt;<span class="tg">h1</span>&gt;{<span class="n">greeting</span>}&lt;/<span class="tg">h1</span>&gt;</span><span class="l">      {<span class="n">awake</span> !== <span class="n">false</span> &amp;&amp; &lt;<span class="tg">p</span>&gt;The night is young.&lt;/<span class="tg">p</span>&gt;}</span><span class="l">    &lt;/<span class="tg">section</span>&gt;</span><span class="l">  );</span><span class="l">}</span></pre>
 <pre id="css" hidden><span class="l"><span class="c">/* Same palette, any language. */</span></span><span class="l"><span class="k">:root</span> {</span><span class="l">  <span class="t">--bg</span>: <span class="n">#1E1F29</span>;</span><span class="l">  <span class="t">--accent</span>: <span class="n">#BD93F9</span>;</span><span class="l">}</span><span class="l"> </span><span class="l hl"><span class="tg">.coffin</span> &gt; <span class="tg">.lid</span>:<span class="a">hover</span> {</span><span class="l">  <span class="t">background</span>: <span class="f">color-mix</span>(<span class="k">in</span> <span class="t">oklch</span>, <span class="f">var</span>(<span class="t">--accent</span>) <span class="n">20%</span>, <span class="f">var</span>(<span class="t">--bg</span>));</span><span class="l">  <span class="t">transform</span>: <span class="f">rotate</span>(<span class="n">-8deg</span>);</span><span class="l">  <span class="t">transition</span>: <span class="t">transform</span> <span class="n">400ms</span> <span class="s">ease-out</span>;</span><span class="l">}</span><span class="l"> </span><span class="l"><span class="k">@media</span> (<span class="t">prefers-color-scheme</span>: <span class="s">dark</span>) {</span><span class="l">  <span class="tg">body</span> { <span class="t">color</span>: <span class="n">#CDD0DD</span>; }</span><span class="l">}</span></pre>
-      <div class="status"><span>main</span><span>Victor Mono · UTF-8 · Draculinho</span></div>
+      <div class="status"><span>main</span><span>JetBrains Mono · UTF-8 · Draculinho</span></div>
     </div>
   </div>
 </header>
