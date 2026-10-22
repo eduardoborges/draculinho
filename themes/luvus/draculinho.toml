@@ -11,7 +11,7 @@ license = "MIT"
 [colors]
 crust = "#0A0E15"
 mantle = "#0C1017"
-base = "#0E131B"
+base = "#1E1F29"
 surface0 = "#191A21"
 surface1 = "#21222C"
 overlay0 = "#282A36"

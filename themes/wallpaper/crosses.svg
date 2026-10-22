@@ -9,7 +9,7 @@
     <mask id="m"><rect width="1600" height="1000" fill="url(#f)"/></mask>
     <clipPath id="c"><rect x="90" y="90" width="1420" height="820"/></clipPath>
   </defs>
-  <rect width="1600" height="1000" fill="#0e131b"/>
+  <rect width="1600" height="1000" fill="#1e1f29"/>
   <rect width="1600" height="1000" fill="url(#p)" mask="url(#m)" clip-path="url(#c)"/>
   <path d="M1376 771v10M1371 776h10" stroke="#ff79c6" stroke-width="2"/>
   <path d="M1184 835v10M1179 840h10" stroke="#bd93f9" stroke-width="2"/>

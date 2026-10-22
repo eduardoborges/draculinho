@@ -1,6 +1,6 @@
 # Draculinho for btop. Dracula, a few shades darker.
 
-theme[main_bg]="#0E131B"
+theme[main_bg]="#1E1F29"
 theme[main_fg]="#CDD0DD"
 theme[title]="#CDD0DD"
 theme[hi_fg]="#BD93F9"

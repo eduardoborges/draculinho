@@ -6,7 +6,7 @@
     <mask id="m"><rect width="1600" height="1000" fill="url(#f)"/></mask>
     <clipPath id="c"><rect x="96" y="96" width="1408" height="808"/></clipPath>
   </defs>
-  <rect width="1600" height="1000" fill="#0e131b"/>
+  <rect width="1600" height="1000" fill="#1e1f29"/>
   <g fill="none" stroke="#465276" stroke-width="1.2" mask="url(#m)" clip-path="url(#c)">
     <circle cx="96" cy="904" r="40"/>
     <circle cx="96" cy="904" r="80"/>

@@ -1,7 +1,7 @@
 {
   "base": "dark",
   "colors": {
-    "window": "#0E131B",
+    "window": "#1E1F29",
     "panel": "#0B0F16",
     "surface": "#151A24",
     "surface_hover": "#21222C",
@@ -12,7 +12,7 @@
     "dim": "#465276",
     "accent": "#BD93F9",
     "accent_hover": "#FF79C6",
-    "on_accent": "#0E131B",
+    "on_accent": "#1E1F29",
     "danger": "#FF5555",
     "warning": "#FFB86C"
   }

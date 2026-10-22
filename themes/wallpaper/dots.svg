@@ -9,7 +9,7 @@
     <mask id="m"><rect width="1600" height="1000" fill="url(#f)"/></mask>
     <clipPath id="c"><rect x="90" y="90" width="1420" height="820"/></clipPath>
   </defs>
-  <rect width="1600" height="1000" fill="#0e131b"/>
+  <rect width="1600" height="1000" fill="#1e1f29"/>
   <rect width="1600" height="1000" fill="url(#p)" mask="url(#m)" clip-path="url(#c)"/>
   <g fill-opacity=".9">
     <circle cx="288" cy="224" r="2.6" fill="#bd93f9"/>

@@ -4,8 +4,8 @@ name = "dracula"
 
 [theme.custom]
 accent = "#BD93F9"
-panel_bg = "#0E131B"
-sidebar_bg = "#0E131B"
+panel_bg = "#1E1F29"
+sidebar_bg = "#1E1F29"
 active_row_bg = "#282A36"
 selection_bg = "#44475A"
 surface0 = "#21222C"

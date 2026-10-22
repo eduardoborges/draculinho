@@ -1,7 +1,7 @@
 {
   "$schema": "https://opencode.ai/theme.json",
   "defs": {
-    "background": "#0E131B",
+    "background": "#1E1F29",
     "currentLine": "#21222C",
     "selection": "#44475A",
     "foreground": "#CDD0DD",
@@ -45,14 +45,14 @@
     },
     "text": {
       "dark": "foreground",
-      "light": "#0e131b"
+      "light": "#1e1f29"
     },
     "textMuted": {
       "dark": "comment",
       "light": "#465276"
     },
     "background": {
-      "dark": "#0e131b",
+      "dark": "#1e1f29",
       "light": "#cdd0dd"
     },
     "backgroundPanel": {
@@ -125,7 +125,7 @@
     },
     "markdownText": {
       "dark": "foreground",
-      "light": "#0e131b"
+      "light": "#1e1f29"
     },
     "markdownHeading": {
       "dark": "purple",
@@ -177,7 +177,7 @@
     },
     "markdownCodeBlock": {
       "dark": "foreground",
-      "light": "#0e131b"
+      "light": "#1e1f29"
     },
     "syntaxComment": {
       "dark": "comment",
@@ -193,7 +193,7 @@
     },
     "syntaxVariable": {
       "dark": "foreground",
-      "light": "#0e131b"
+      "light": "#1e1f29"
     },
     "syntaxString": {
       "dark": "yellow",
@@ -213,7 +213,7 @@
     },
     "syntaxPunctuation": {
       "dark": "foreground",
-      "light": "#0e131b"
+      "light": "#1e1f29"
     }
   }
 }

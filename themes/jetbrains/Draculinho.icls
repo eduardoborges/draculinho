@@ -2,11 +2,11 @@
   <colors>
     <option name="ADDED_LINES_COLOR" value="48b764" />
     <option name="ANNOTATIONS_COLOR" value="cdd0dd" />
-    <option name="BLOCK_TERMINAL_DEFAULT_BACKGROUND" value="0e131b" />
+    <option name="BLOCK_TERMINAL_DEFAULT_BACKGROUND" value="1e1f29" />
     <option name="BLOCK_TERMINAL_DEFAULT_FOREGROUND" value="cdd0dd" />
     <option name="CARET_COLOR" value="cccccc" />
     <option name="CARET_ROW_COLOR" value="1e1f29" />
-    <option name="CONSOLE_BACKGROUND_KEY" value="0e131b" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="1e1f29" />
     <option name="DELETED_LINES_COLOR" value="cd4644" />
     <option name="DOCUMENTATION_COLOR" value="3a3d4c" />
     <option name="DOC_COMMENT_LINK" value="ff79c6" />
@@ -207,7 +207,7 @@
     <option name="BREADCRUMBS_HOVERED">
       <value>
         <option name="FOREGROUND" value="ff79c6" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
       </value>
     </option>
     <option name="BREADCRUMBS_INACTIVE">
@@ -760,7 +760,7 @@
     <option name="GO_COLON">
       <value>
         <option name="FOREGROUND" value="cdd0dd" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
@@ -975,7 +975,7 @@
     <option name="HAML_TAG">
       <value>
         <option name="FOREGROUND" value="cdd0dd" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
@@ -1723,7 +1723,7 @@
     <option name="RUBY_HEREDOC_CONTENT">
       <value>
         <option name="FOREGROUND" value="e2dd61" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
@@ -1916,7 +1916,7 @@
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="cdd0dd" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
@@ -2056,21 +2056,21 @@
     <option name="YAML_SCALAR_LIST">
       <value>
         <option name="FOREGROUND" value="3dcf62" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
     <option name="YAML_SCALAR_VALUE">
       <value>
         <option name="FOREGROUND" value="3dcf62" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>
     <option name="YAML_TEXT">
       <value>
         <option name="FOREGROUND" value="bd93f9" />
-        <option name="BACKGROUND" value="0e131b" />
+        <option name="BACKGROUND" value="1e1f29" />
         <option name="EFFECT_TYPE" value="5" />
       </value>
     </option>

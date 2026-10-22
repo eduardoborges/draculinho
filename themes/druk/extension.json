@@ -8,11 +8,11 @@
       "id": "draculinho",
       "name": "Draculinho",
       "ui": {
-        "bg": "#0E131B",
+        "bg": "#1E1F29",
         "panelBg": "#0B0F16",
         "barBg": "#0A0E14",
         "statusBg": "#BD93F9",
-        "statusFg": "#0E131B",
+        "statusFg": "#1E1F29",
         "text": "#CDD0DD",
         "dim": "#7a86ad",
         "faint": "#44475A",

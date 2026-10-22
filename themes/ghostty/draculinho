@@ -14,10 +14,10 @@ palette = 12=#d6acff
 palette = 13=#ff92df
 palette = 14=#a4ffff
 palette = 15=#ffffff
-background = #0e131b
+background = #1e1f29
 foreground = #cdd0dd
 cursor-color = #cdd0dd
-cursor-text = #0e131b
+cursor-text = #1e1f29
 selection-background = #44475a
 selection-foreground = #cdd0dd
 faint-opacity = 0.75

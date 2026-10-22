@@ -6,9 +6,9 @@
 
 Dracula, a few shades darker. Made for ligature fonts and italics.
 
-[![VS Code](https://img.shields.io/visual-studio-marketplace/v/eduardoborges.draculinho?style=flat-square&label=VS%20Code&colorA=0E131B&colorB=BD93F9)](https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho)
-[![Open VSX](https://img.shields.io/open-vsx/v/eduardoborges/draculinho?style=flat-square&label=Open%20VSX&colorA=0E131B&colorB=FF79C6)](https://open-vsx.org/extension/eduardoborges/draculinho)
-[![License](https://img.shields.io/github/license/eduardoborges/draculinho?style=flat-square&colorA=0E131B&colorB=3dcf62)](./LICENSE.md)
+[![VS Code](https://img.shields.io/visual-studio-marketplace/v/eduardoborges.draculinho?style=flat-square&label=VS%20Code&colorA=1E1F29&colorB=BD93F9)](https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho)
+[![Open VSX](https://img.shields.io/open-vsx/v/eduardoborges/draculinho?style=flat-square&label=Open%20VSX&colorA=1E1F29&colorB=FF79C6)](https://open-vsx.org/extension/eduardoborges/draculinho)
+[![License](https://img.shields.io/github/license/eduardoborges/draculinho?style=flat-square&colorA=1E1F29&colorB=3dcf62)](./LICENSE.md)
 
 <br />
 
@@ -80,7 +80,7 @@ curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/insta
 
 <img src="./assets/palette.png" alt="Draculinho palette" />
 
-Draculinho keeps Dracula's hues and drops the background from `#282A36` to `#0E131B`. Green, cyan and yellow are pulled back a notch so they don't glow against the darker ground, and comments sit at `#465276`, dim enough to read past. Keywords, storage types and `this` are italic, which is where a font with a real italic earns its place.
+Draculinho keeps Dracula's hues and drops the background from `#282A36` to `#1E1F29`. Green, cyan and yellow are pulled back a notch so they don't glow against the darker ground, and comments sit at `#465276`, dim enough to read past. Keywords, storage types and `this` are italic, which is where a font with a real italic earns its place.
 
 ## Terminal
 
