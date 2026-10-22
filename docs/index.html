@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Draculinho</title>
+<meta name="description" content="Dracula, a few shades darker. Made for ligature fonts and italics.">
+<meta name="theme-color" content="#1E1F29">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/eduardoborges/draculinho@main/assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&family=Victor+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1E1F29; --panel: #21222C; --edge: #191A21; --line: #44475A;
+    --fg: #CDD0DD; --dim: #7A86AD; --comment: #465276;
+    --purple: #BD93F9; --pink: #FF79C6; --green: #3dcf62; --cyan: #00B5DC;
+    --yellow: #E2DD61; --orange: #FFB86C; --red: #FF5555;
+    --mono: "Victor Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--fg); font: 400 17px/1.6 "Inter Tight", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: var(--purple); text-decoration: none; }
+  a:hover { color: var(--pink); }
+  code, pre { font-family: var(--mono); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  section { padding: 96px 0; }
+  h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 12px; }
+  .lead { color: var(--dim); max-width: 60ch; margin-bottom: 40px; }
+
+  /* backdrop: the dots wallpaper pattern */
+  .hero { position: relative; padding: 72px 0 96px; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1;
+    background: radial-gradient(#465276 1.3px, transparent 1.4px) 0 0 / 32px 32px;
+    mask: radial-gradient(ellipse 80% 70% at 20% 0%, #000, transparent 75%); }
+  nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 72px; }
+  nav .brand { display: flex; gap: 10px; align-items: center; color: var(--fg); font-weight: 700; }
+  nav .brand img { width: 32px; height: 32px; }
+  nav .links { display: flex; gap: 24px; font-size: 15px; }
+  nav .links a { color: var(--dim); }
+  nav .links a:hover { color: var(--fg); }
+  h1 { font-size: clamp(48px, 9vw, 104px); font-weight: 800; letter-spacing: -0.045em; line-height: 0.95; }
+  h1 em { font-family: var(--mono); font-weight: 400; font-style: italic; color: var(--pink); letter-spacing: -0.02em; }
+  .tagline { font-size: clamp(18px, 2.2vw, 22px); color: var(--dim); max-width: 44ch; margin: 24px 0 36px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-weight: 600; font-size: 15px; border: 1px solid var(--line); color: var(--fg); background: var(--panel); }
+  .btn:hover { color: var(--fg); border-color: var(--purple); }
+  .btn.primary { background: var(--purple); color: var(--bg); border-color: var(--purple); }
+  .btn.primary:hover { background: var(--pink); border-color: var(--pink); color: var(--bg); }
+
+  /* editor window */
+  .window { margin-top: 64px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg); overflow: hidden; box-shadow: 0 40px 120px -40px #BD93F944, 0 0 0 1px var(--edge); }
+  .bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--edge); background: var(--bg); }
+  .bar i { width: 12px; height: 12px; border-radius: 50%; background: var(--line); }
+  .tabs { display: flex; margin-left: 16px; font: 13px var(--mono); }
+  .tabs button { all: unset; cursor: pointer; padding: 4px 14px; color: var(--dim); border-bottom: 2px solid transparent; }
+  .tabs button[aria-selected="true"] { color: var(--fg); border-color: var(--pink); }
+  pre { padding: 24px 0; font-size: 15px; line-height: 1.75; overflow-x: auto; counter-reset: ln; }
+  pre[hidden] { display: none; }
+  pre span.l { display: block; padding-right: 24px; }
+  pre span.l::before { counter-increment: ln; content: counter(ln); display: inline-block; width: 56px; padding-right: 20px; text-align: right; color: var(--comment); }
+  pre span.l.hl { background: #BD93F915; }
+  .k { color: var(--pink); font-style: italic; }  .s { color: var(--yellow); }
+  .f { color: var(--green); }  .t { color: var(--cyan); font-style: italic; }
+  .c { color: var(--dim); font-style: italic; }   .n { color: var(--purple); }
+  .p { color: var(--orange); font-style: italic; }  .a { color: var(--green); font-style: italic; }
+  .tg { color: var(--pink); }  .th { color: var(--purple); font-style: italic; }
+  .status { display: flex; justify-content: space-between; padding: 6px 16px; border-top: 1px solid var(--edge); font: 12px var(--mono); color: var(--dim); }
+
+  /* palette */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .sw { all: unset; cursor: pointer; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel); transition: transform .15s; }
+  .sw:hover { transform: translateY(-3px); }
+  .sw:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+  .sw .chip { height: 88px; }
+  .sw .meta { padding: 10px 12px; font-size: 14px; }
+  .sw .meta b { display: block; font-weight: 600; }
+  .sw .meta code { color: var(--dim); font-size: 13px; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; margin-top: 32px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+  .compare div { padding: 28px; font-family: var(--mono); font-size: 14px; }
+  .compare small { display: block; font-family: "Inter Tight", sans-serif; color: var(--dim); margin-bottom: 8px; }
+
+  /* terminal */
+  .term { font: 15px/1.7 var(--mono); padding: 24px; }
+  .term .pr { color: var(--green); } .term .pa { color: var(--cyan); }
+  .ansi { display: grid; grid-template-columns: repeat(8, 28px); gap: 6px; margin-top: 20px; }
+  .ansi i { aspect-ratio: 1; border-radius: 6px; }
+
+  /* apps */
+  .apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .app { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--panel); }
+  .app b { display: block; font-weight: 600; margin-bottom: 4px; }
+  .app code { font-size: 13px; color: var(--dim); }
+  .install { display: flex; align-items: center; gap: 12px; margin-top: 32px; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--edge); font: 14px var(--mono); }
+  .install code { flex: 1; overflow-x: auto; white-space: nowrap; }
+  .install .pr { color: var(--pink); }
+  .copy { all: unset; cursor: pointer; font: 600 13px "Inter Tight", sans-serif; color: var(--purple); padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); }
+  .copy:hover { border-color: var(--purple); }
+
+  /* wallpapers */
+  .walls { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .walls img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); display: block; background: var(--panel); }
+  .walls figcaption { color: var(--dim); font-size: 14px; margin-top: 8px; }
+
+  footer { border-top: 1px solid var(--edge); padding: 40px 0; color: var(--dim); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 20px); opacity: 0; background: var(--purple); color: var(--bg); font-weight: 600; padding: 10px 18px; border-radius: 10px; transition: .2s; pointer-events: none; }
+  .toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (max-width: 640px) {
+    section { padding: 64px 0; }
+    nav .links a:not(:last-child) { display: none; }
+    pre { font-size: 13px; }
+    pre span.l::before { width: 40px; padding-right: 14px; }
+    .compare { grid-template-columns: 1fr; }
+    .walls { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#"><img src="https://cdn.jsdelivr.net/gh/eduardoborges/draculinho@main/assets/logo.png" alt="">Draculinho</a>
+      <div class="links">
+        <a href="#palette">Palette</a>
+        <a href="#apps">Apps</a>
+        <a href="#wallpapers">Wallpapers</a>
+        <a href="https://github.com/eduardoborges/draculinho">GitHub</a>
+      </div>
+    </nav>
+
+    <h1>Dracula,<br><em>a few shades</em> darker.</h1>
+    <p class="tagline">A dark theme made for ligature fonts and italics, with the same palette across your editor, terminal and the rest of your apps.</p>
+    <div class="ctas">
+      <a class="btn primary" href="https://marketplace.visualstudio.com/items?itemName=eduardoborges.draculinho">Install for VS Code</a>
+      <a class="btn" href="#apps">Other apps</a>
+    </div>
+
+    <div class="window">
+      <div class="bar">
+        <i></i><i></i><i></i>
+        <div class="tabs" role="tablist">
+          <button role="tab" aria-selected="true" data-tab="tsx">Profile.tsx</button>
+          <button role="tab" aria-selected="false" data-tab="css">theme.css</button>
+        </div>
+      </div>
+<pre id="tsx"><span class="l"><span class="k">import</span> { <span class="f">useState</span> } <span class="k">from</span> <span class="s">"react"</span>;</span><span class="l"> </span><span class="l"><span class="c">// Keywords, types and `this` are italic. Ligatures do the rest: =&gt; !== &gt;=</span></span><span class="l"><span class="k">type</span> <span class="t">Props</span> = { <span class="p">name</span>: <span class="t">string</span>; <span class="p">fangs</span>?: <span class="t">number</span> };</span><span class="l"> </span><span class="l hl"><span class="k">export</span> <span class="k">function</span> <span class="f">Profile</span>({ <span class="p">name</span>, <span class="p">fangs</span> = <span class="n">2</span> }: <span class="t">Props</span>) {</span><span class="l">  <span class="k">const</span> [<span class="n">awake</span>, <span class="f">setAwake</span>] = <span class="f">useState</span>(<span class="n">false</span>);</span><span class="l">  <span class="k">const</span> <span class="n">greeting</span> = <span class="n">fangs</span> &gt;= <span class="n">2</span> ? <span class="s">`Good evening, ${</span>name<span class="s">}`</span> : <span class="s">"Hi"</span>;</span><span class="l"> </span><span class="l">  <span class="k">return</span> (</span><span class="l">    &lt;<span class="tg">section</span> <span class="a">className</span>=<span class="s">"profile"</span> <span class="a">onClick</span>={() =&gt; <span class="f">setAwake</span>(!<span class="n">awake</span>)}&gt;</span><span class="l">      &lt;<span class="tg">h1</span>&gt;{<span class="n">greeting</span>}&lt;/<span class="tg">h1</span>&gt;</span><span class="l">      {<span class="n">awake</span> !== <span class="n">false</span> &amp;&amp; &lt;<span class="tg">p</span>&gt;The night is young.&lt;/<span class="tg">p</span>&gt;}</span><span class="l">    &lt;/<span class="tg">section</span>&gt;</span><span class="l">  );</span><span class="l">}</span></pre>
+<pre id="css" hidden><span class="l"><span class="c">/* Same palette, any language. */</span></span><span class="l"><span class="k">:root</span> {</span><span class="l">  <span class="t">--bg</span>: <span class="n">#1E1F29</span>;</span><span class="l">  <span class="t">--accent</span>: <span class="n">#BD93F9</span>;</span><span class="l">}</span><span class="l"> </span><span class="l hl"><span class="tg">.coffin</span> &gt; <span class="tg">.lid</span>:<span class="a">hover</span> {</span><span class="l">  <span class="t">background</span>: <span class="f">color-mix</span>(<span class="k">in</span> <span class="t">oklch</span>, <span class="f">var</span>(<span class="t">--accent</span>) <span class="n">20%</span>, <span class="f">var</span>(<span class="t">--bg</span>));</span><span class="l">  <span class="t">transform</span>: <span class="f">rotate</span>(<span class="n">-8deg</span>);</span><span class="l">  <span class="t">transition</span>: <span class="t">transform</span> <span class="n">400ms</span> <span class="s">ease-out</span>;</span><span class="l">}</span><span class="l"> </span><span class="l"><span class="k">@media</span> (<span class="t">prefers-color-scheme</span>: <span class="s">dark</span>) {</span><span class="l">  <span class="tg">body</span> { <span class="t">color</span>: <span class="n">#CDD0DD</span>; }</span><span class="l">}</span></pre>
+      <div class="status"><span>main</span><span>Victor Mono · UTF-8 · Draculinho</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="palette">
+  <div class="wrap">
+    <h2>The palette</h2>
+    <p class="lead">Dracula's hues on a darker ground. Green, cyan and yellow are pulled back a notch so they don't glow, and comments sit dim enough to read past. Click a color to copy it.</p>
+    <div class="swatches" id="swatches"></div>
+    <div class="compare">
+      <div style="background:#282A36"><small>Dracula</small>#282A36</div>
+      <div style="background:#1E1F29"><small>Draculinho</small>#1E1F29</div>
+    </div>
+  </div>
+</section>
+
+<section id="terminal" style="padding-top:0">
+  <div class="wrap">
+    <h2>In the terminal</h2>
+    <p class="lead">Ghostty and Zed's terminal share the same sixteen ANSI colors. Herdr, Claude Code, btop, lazygit and OpenCode follow the same palette.</p>
+    <div class="window" style="margin-top:0">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <div class="term">
+        <div><span class="pr">❯</span> <span class="pa">~/Projects/draculinho</span> <span style="color:var(--purple)">main</span> <span style="color:var(--orange)">✱</span></div>
+        <div><span class="pr">❯</span> sh install.sh ghostty zed btop</div>
+        <div style="color:var(--dim)">  copied to ~/.config/ghostty/themes/</div>
+        <div><span style="color:var(--green)">  ✓</span> zed  <span style="color:var(--green)">✓</span> btop  <span style="color:var(--red)">✗</span> <span style="color:var(--dim)">chrome (load it unpacked)</span></div>
+        <div class="ansi" id="ansi"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apps" style="padding-top:0">
+  <div class="wrap">
+    <h2>One palette, every app</h2>
+    <p class="lead">The install script copies each theme into place and points the app's config at it. Run it with no arguments for a menu, name the apps you want, or pass <code>all</code>.</p>
+    <div class="apps" id="apps-grid"></div>
+    <div class="install">
+      <code><span class="pr">$</span> curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/install.sh | sh</code>
+      <button class="copy" data-copy="curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/install.sh | sh">Copy</button>
+    </div>
+  </div>
+</section>
+
+<section id="wallpapers" style="padding-top:0">
+  <div class="wrap">
+    <h2>Wallpapers</h2>
+    <p class="lead">5120×3200, drawn from the same palette. <code>sh install.sh wallpaper</code> sets one on every Space on macOS.</p>
+    <div class="walls" id="walls"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>MIT licensed. Made by <a href="https://github.com/eduardoborges">Eduardo Borges</a>.</span>
+    <span><a href="https://github.com/eduardoborges/draculinho">GitHub</a> · <a href="https://open-vsx.org/extension/eduardoborges/draculinho">Open VSX</a></span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+  const RAW = "https://cdn.jsdelivr.net/gh/eduardoborges/draculinho@main/";
+
+  const palette = [
+    ["Background", "#1E1F29"], ["Current line", "#44475A"], ["Foreground", "#CDD0DD"], ["Comment", "#7A86AD"],
+    ["Purple", "#BD93F9"], ["Pink", "#FF79C6"], ["Green", "#3DCF62"], ["Cyan", "#00B5DC"],
+    ["Yellow", "#E2DD61"], ["Orange", "#FFB86C"], ["Red", "#FF5555"],
+  ];
+  document.getElementById("swatches").innerHTML = palette.map(([name, hex]) =>
+    `<button class="sw" data-copy="${hex}"><div class="chip" style="background:${hex}"></div><div class="meta"><b>${name}</b><code>${hex}</code></div></button>`).join("");
+
+  // ghostty ANSI 0-15
+  const ansi = ["#21222c","#ff5555","#3dcf62","#e2dd61","#bd93f9","#ff79c6","#00b5dc","#cdd0dd",
+                "#7a86ad","#ff6e6e","#69ff94","#ffffa5","#d6acff","#ff92df","#a4ffff","#ffffff"];
+  document.getElementById("ansi").innerHTML = ansi.map(c => `<i style="background:${c}" title="${c}"></i>`).join("");
+
+  const apps = [
+    ["VS Code, Cursor, VSCodium", "ext install eduardoborges.draculinho"],
+    ["Zed", "sh install.sh zed"], ["Ghostty", "sh install.sh ghostty"], ["Herdr", "sh install.sh herdr"],
+    ["Claude Code", "sh install.sh claude-code"], ["Chrome", "sh install.sh chrome"], ["OpenCode", "sh install.sh opencode"],
+    ["lazygit, lazydocker", "sh install.sh lazygit lazydocker"], ["Xcode", "sh install.sh xcode"],
+    ["JetBrains, Android Studio", "sh install.sh android-studio"], ["Slack", "sh install.sh slack"],
+    ["Luvus", "sh install.sh luvus"], ["btop", "sh install.sh btop"], ["druk", "sh install.sh druk"],
+    ["Spotifast", "sh install.sh spotifast"], ["Wallpaper", "sh install.sh wallpaper"],
+  ];
+  document.getElementById("apps-grid").innerHTML = apps.map(([name, cmd]) =>
+    `<div class="app"><b>${name}</b><code>${cmd}</code></div>`).join("");
+
+  // ponytail: SVG sources instead of the 5120px PNGs, same art at a fraction of the weight
+  document.getElementById("walls").innerHTML = ["dots", "crosses", "rings"].map(w =>
+    `<figure><a href="${RAW}themes/wallpaper/${w}.png"><img loading="lazy" src="${RAW}themes/wallpaper/${w}.svg" alt="${w} wallpaper"></a><figcaption>${w[0].toUpperCase() + w.slice(1)}</figcaption></figure>`).join("");
+
+  document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+    document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
+    document.querySelectorAll("pre").forEach(p => p.hidden = p.id !== b.dataset.tab);
+  });
+
+  const toast = document.getElementById("toast");
+  document.addEventListener("click", async e => {
+    const el = e.target.closest("[data-copy]");
+    if (!el) return;
+    try { await navigator.clipboard.writeText(el.dataset.copy); toast.textContent = `Copied ${el.dataset.copy.length > 12 ? "command" : el.dataset.copy}`; }
+    catch { toast.textContent = "Copy failed"; }
+    toast.classList.add("on");
+    clearTimeout(toast.t); toast.t = setTimeout(() => toast.classList.remove("on"), 1400);
+  });
+</script>
+</body>
+</html>
