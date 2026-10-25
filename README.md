@@ -26,6 +26,7 @@ Dracula, a few shades darker. Made for ligature fonts and italics.
 | Ghostty | `sh install.sh ghostty` |
 | Herdr | `sh install.sh herdr` |
 | Claude Code | `sh install.sh claude-code` |
+| Grok Build | `sh install.sh grok`, on top of the Ghostty theme |
 | Chrome | `sh install.sh chrome`, then load it unpacked |
 | OpenCode | `sh install.sh opencode` |
 | lazygit, lazydocker | `sh install.sh lazygit lazydocker` |
@@ -54,6 +55,8 @@ curl -fsSL https://raw.githubusercontent.com/eduardoborges/draculinho/main/insta
 **Herdr.** Herdr has no theme files, only overrides on top of a built-in theme. Paste the contents of [`themes/herdr/draculinho.toml`](./themes/herdr/draculinho.toml) into `~/.config/herdr/config.toml` and run `herdr server reload-config`.
 
 **Claude Code.** Copy [`themes/claude-code/draculinho.json`](./themes/claude-code/draculinho.json) to `~/.claude/themes/` and pick Draculinho in `/theme`, or set `"theme": "custom:draculinho"` in `~/.claude/settings.json`.
+
+**Grok Build.** Grok can't load custom themes. Its `terminal` theme takes every color from the terminal instead, so run it in Ghostty with the Draculinho theme. Merge [`themes/grok/config.toml`](./themes/grok/config.toml) into `~/.grok/config.toml`. Keep the `terminal_theme` flag until the theme finishes rolling out, since Grok ignores `theme = "terminal"` without it.
 
 **Chrome.** Chrome only takes themes from the Web Store or as an unpacked extension. Open `chrome://extensions`, turn on Developer mode, click Load unpacked and pick the [`themes/chrome`](./themes/chrome) folder.
 
@@ -89,7 +92,7 @@ Draculinho keeps Dracula's hues and drops the background from `#282A36` to `#1E1
 <img src="./assets/preview-terminal.png" width="760" alt="Ghostty running Draculinho" />
 </div>
 
-Ghostty and Zed's terminal share the same sixteen ANSI colors. Herdr gets `[theme.custom]` overrides on its built-in Dracula. Claude Code gets the palette across the prompt, diffs and status colors, with the working spinner in orange.
+Ghostty and Zed's terminal share the same sixteen ANSI colors. Herdr gets `[theme.custom]` overrides on its built-in Dracula. Claude Code gets the palette across the prompt, diffs and status colors, with the working spinner in orange. Grok Build reads them straight from the terminal.
 
 ## CSS
 

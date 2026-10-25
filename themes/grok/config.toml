@@ -1,0 +1,10 @@
+# Draculinho for Grok Build. Grok can't load custom themes, so this turns on its terminal theme,
+# which takes every color from the terminal. Use it with the Ghostty port.
+# Merge into ~/.grok/config.toml.
+[ui]
+theme = "terminal"
+
+# The terminal theme is still rolling out. Without this flag Grok ignores theme = "terminal"
+# and falls back to its default.
+[features]
+terminal_theme = true

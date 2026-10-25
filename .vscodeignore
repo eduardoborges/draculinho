@@ -11,6 +11,7 @@ themes/zed/
 themes/ghostty/
 themes/herdr/
 themes/claude-code/
+themes/grok/
 pnpm-workspace.yaml
 assets/preview-*.png
 assets/palette.png

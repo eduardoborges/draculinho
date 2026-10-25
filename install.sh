@@ -9,7 +9,7 @@ set -eu
 RAW="https://raw.githubusercontent.com/eduardoborges/draculinho/main/themes"
 HERE="$(cd "$(dirname "$0")" 2>/dev/null && pwd || pwd)"
 CFG="${XDG_CONFIG_HOME:-$HOME/.config}"
-APPS="vscode zed ghostty herdr claude-code chrome opencode lazygit lazydocker xcode android-studio slack luvus btop druk spotifast wallpaper"
+APPS="vscode zed ghostty herdr claude-code grok chrome opencode lazygit lazydocker xcode android-studio slack luvus btop druk spotifast wallpaper"
 
 # theme <app> <file>: prints the local path of a theme file, downloading it when there is no checkout.
 theme() {
@@ -92,6 +92,33 @@ PY
   else
     say "copied to $dir/themes/. Pick Draculinho with /theme."
   fi
+}
+
+# toml_set <file> <section> <key> <value>: sets key = value inside [section], adding the section or the key when missing.
+toml_set() {
+  tmp="$(mktemp)"
+  if ! grep -q "^\[$2\]" "$1"; then
+    cp "$1" "$tmp"
+    [ -s "$1" ] && printf '\n' >> "$tmp"
+    printf '[%s]\n%s = %s\n' "$2" "$3" "$4" >> "$tmp"
+  elif sed -n "/^\[$2\]/,/^\[/p" "$1" | grep -qE "^$3 *="; then
+    sed -E "/^\[$2\]/,/^\[/ s|^$3 *=.*|$3 = $4|" "$1" > "$tmp"
+  else
+    sed "/^\[$2\]/a\\
+$3 = $4
+" "$1" > "$tmp"
+  fi
+  cat "$tmp" > "$1"
+  rm -f "$tmp"
+}
+
+install_grok() {
+  conf="${GROK_HOME:-$HOME/.grok}/config.toml"
+  mkdir -p "$(dirname "$conf")"
+  touch "$conf"
+  toml_set "$conf" ui theme '"terminal"'
+  toml_set "$conf" features terminal_theme true
+  say "theme = \"terminal\" set in $conf. Grok takes its colors from the terminal, so run it in Ghostty with Draculinho. Restart Grok."
 }
 
 install_chrome() {

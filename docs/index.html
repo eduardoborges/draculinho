@@ -349,7 +349,7 @@
     <div class="wrap split">
       <div>
         <h2 data-reveal>Same colors in the terminal</h2>
-        <p class="lead" data-reveal>Ghostty and Zed's terminal share these sixteen ANSI colors. Herdr, btop, lazygit and Claude Code get the palette too.</p>
+        <p class="lead" data-reveal>Ghostty and Zed's terminal share these sixteen ANSI colors. Herdr, btop, lazygit, Claude Code and Grok Build get the palette too.</p>
         <div class="ansi" id="ansi" data-reveal></div>
       </div>
       <div class="window term" data-reveal>
@@ -586,7 +586,7 @@ btop
   // ids match the app names in install.sh
   const APPS = {
     Editors: [['vscode', 'VS Code'], ['zed', 'Zed'], ['xcode', 'Xcode'], ['android-studio', 'Android Studio']],
-    Terminal: [['ghostty', 'Ghostty'], ['herdr', 'Herdr'], ['claude-code', 'Claude Code'], ['opencode', 'OpenCode'], ['lazygit', 'lazygit'], ['lazydocker', 'lazydocker'], ['btop', 'btop']],
+    Terminal: [['ghostty', 'Ghostty'], ['herdr', 'Herdr'], ['claude-code', 'Claude Code'], ['grok', 'Grok Build'], ['opencode', 'OpenCode'], ['lazygit', 'lazygit'], ['lazydocker', 'lazydocker'], ['btop', 'btop']],
     More: [['chrome', 'Chrome'], ['slack', 'Slack'], ['spotifast', 'Spotifast'], ['luvus', 'Luvus'], ['druk', 'druk'], ['wallpaper', 'Wallpaper']],
   };
   $('#picker').innerHTML = Object.entries(APPS).map(([group, apps]) => `<div><h3>${group}</h3><div class="chips">${apps.map(([id, name]) =>
