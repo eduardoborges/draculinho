@@ -35,6 +35,9 @@ importers:
       '@vscode/vsce':
         specifier: ^3.7.1
         version: 3.7.1(supports-color@7.2.0)
+      fflate:
+        specifier: ^0.8.3
+        version: 0.8.3
       ovsx:
         specifier: ^0.10.9
         version: 0.10.9(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
@@ -1077,6 +1080,9 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  fflate@0.8.3:
+    resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
 
   figures@2.0.0:
     resolution: {integrity: sha512-Oa2M9atig69ZkfwiApY8F2Yy+tzMbazyvqv21R0NsSC8floSOC09BbT1ITWAdoMGQvJ/aZnR1KMwdx9tvHnTNA==}
@@ -3586,6 +3592,8 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.3):
     optionalDependencies:
       picomatch: 4.0.3
+
+  fflate@0.8.3: {}
 
   figures@2.0.0:
     dependencies:
