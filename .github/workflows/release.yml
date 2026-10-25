@@ -35,8 +35,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build VSIX
-        run: pnpm run build
-
       - name: Release (semantic-release)
         run: pnpm exec semantic-release --ci
