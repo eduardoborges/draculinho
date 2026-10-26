@@ -1,3 +1,16 @@
+# [1.11.0](https://github.com/eduardoborges/draculinho/compare/1.10.0...1.11.0) (2026-10-26)
+
+
+### Bug Fixes
+
+* **release:** build the VSIX after the version bump ([3ee732b](https://github.com/eduardoborges/draculinho/commit/3ee732bfa2b916b0d594bf29bd3e4a4b0468d669))
+
+
+### Features
+
+* **grok:** add a Grok Build theme ([03cb8a8](https://github.com/eduardoborges/draculinho/commit/03cb8a86a351f2d97e7c632d3da8c504457a5c13))
+* **release:** attach a zip per app to each GitHub release ([66b8e50](https://github.com/eduardoborges/draculinho/commit/66b8e50377d1e7a4a7f2c00b2d69130b826c7778))
+
 # [1.10.0](https://github.com/eduardoborges/draculinho/compare/1.9.0...1.10.0) (2026-10-22)
 
 
