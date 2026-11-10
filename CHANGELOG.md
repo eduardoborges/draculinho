@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/eduardoborges/draculinho/compare/1.11.0...1.11.1) (2026-11-10)
+
+
+### Bug Fixes
+
+* **chrome:** make the active tab easier to find ([e2a7282](https://github.com/eduardoborges/draculinho/commit/e2a7282b6da9a89badbb8b76305a090d7803ca41))
+
 # [1.11.0](https://github.com/eduardoborges/draculinho/compare/1.10.0...1.11.0) (2026-10-26)
 
 
